@@ -1,0 +1,96 @@
+* {
+  margin: 0px;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+main {
+  margin-left: 10px;
+}
+
+a:link {
+  text-decoration: none;
+  font-style: bold;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: red;
+  background-color: black;
+}
+
+a:active {
+  color: red;
+}
+
+.main-header {
+  background-color: rgba(0, 255, 255, 0.204);
+  padding-top: 16px;
+  padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 26px;
+  margin-bottom: 50px;
+}
+
+#slogan {
+  translate: 0px 20px;
+  font-size: 24px;
+}
+
+.main-header-buttons {
+  background-color: aliceblue;
+  padding: 10px;
+  font-size: 22px;
+  font-family: Verdana, sans-serif;
+  border: 3px solid;
+  box-shadow: 10px 10px;
+
+}
+
+.main-header-buttons:hover {
+  background-color: rgb(81, 174, 255);
+  transition: 0.5s;
+}
+
+#logo-a {
+  font-size: 26px;
+}
+
+#logo-b {
+  font-size: 32px;
+}
+
+#logo-c {
+  font-size: 38px;
+}
+
+.hola {
+  font-size: 50px;
+  background-color: aliceblue;
+  display: flex;
+  align-items: baseline;
+  border: 3px solid;
+  padding: 5px;
+  padding-right: 15px;
+  box-shadow: 10px 10px;
+  background-color: rgb(198, 228, 255);
+  translate: -80px 0px;
+}
+
+#sign-up-button {
+  background-color: rgb(198, 228, 255);
+}
+
+#button-area {
+  display: flex;
+  gap: 100px;
+  translate: 50px 0px;
+}
