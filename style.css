@@ -1,5 +1,6 @@
 * {
   margin: 0px;
+  font-style: none;
 }
 
 body {
@@ -93,4 +94,43 @@ a:active {
   display: flex;
   gap: 100px;
   translate: 50px 0px;
+}
+
+#section1 {
+  /* margin-top: 50px; */
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+}
+
+#section1a {
+  font-size: 50px;
+}
+
+#section1b {
+  font-size: 30px;
+}
+
+#section1c {
+  margin-top: 50px;
+  font-size: 50px;
+}
+
+.section-button {
+  background-color: aliceblue;
+  padding: 10px;
+  font-size: 32px;
+  font-family: Verdana, sans-serif;
+  border: 3px solid;
+  box-shadow: 10px 10px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content:center
+}
+
+.left-hero {
+  margin-right: 150px;
 }
