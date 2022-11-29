@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
+    <link href="mutes.css" rel="stylesheet" />
     <title>MoreMoreMe</title>
   </head>
   <body>
+    <!-- HEADER -->
+
     <header class="main-header">
-      <div class="hola">
+      <div class="logo-box">
         M
         <div id="logo-a">ore</div>
         M
@@ -23,52 +26,83 @@
         <button class="main-header-buttons" id="sign-up-button">Sign up</button>
       </div>
     </header>
+
+    <!-- HERO -->
+
     <main>
       <div class="hero">
-        <div class="left-hero">
+        <div id="left-hero">
+          <p>
 
-          <p id="section1a">We are both a community and an easy planning tool</p>
-  
-          <p id="section1b">
-            Free time, health, money, creativity, peace of mind, motivation...
+            We are both a <strong>community</strong> and an easy <strong>planning</strong> tool.
+          </p>
+          <p>
+
+            Free time, health, money, <strong>creativity</strong>, peace of mind, <strong>motivation</strong>...
+          </p>
+          <p>
+            Choose your <strong>goals</strong> and go for after them.
           </p>
         </div>
-        <div>aa</div>
+        <div id="right-hero">
+          
+        </div>
       </div>
+
+      <!-- POST HERO -->
+
       <section id="section1">
         <p id="section1c">Plan your path easily from one place.</p>
         <button class="section-button">Join us now!</button>
       </section>
-      <h4>How it works</h4>
-      <ol>
-        <li>Choose your goals.</li>
-        <li>Set up a plan for each goal with our super easy guide.</li>
-        <li>Go for it!</li>
-      </ol>
-      <h4>Share with others</h4>
-      <ul>
-        <li>A safe forum for each goal you choose.</li>
-        <li>
-          Help others, discuss or get advice from your peers that share the same
-          goals.
-        </li>
-        <li>You choose what others see from your plan.</li>
-      </ul>
-      <a href="profile.html">Your profile</a>
-      <footer>Copyright &copy 2022 by MoreMoreMe</footer>
+      <div class="arrow">&darr;	</div>
+
+      <!-- TABLES -->
+
+      <section id="section2">
+        <div class="tab">
+          <h4>How it works</h4>
+          <p>Choose your goals</p>
+          <p>Set up a plan for each</p>
+          <p>Go for it!</p>
+        </div>
+        <div class="tab">
+
+          <h4>Share with others</h4>
+            <p>A forum for each topic</p>
+            <p>
+              Know other ambitious companions
+            </p>
+            <p>Help or get advice from others</p>
+        </div>
+        <!-- <a href="profile.html">Your profile</a> -->
+        
+      </section>
+      <div class="abc">
+
+        <button class="section-button">I am ready!</button>
+      </div>
+
+
+      <footer><strong>Copyright</strong> &copy 2022 by MoreMoreMe</footer>
     </main>
   </body>
 </html>
 
 <!--
+https://developer.mozilla.org/es/
+
+diffchecker.com (checks difference between two texts)
+
 <em> italic
 <strong> bold
-<ol>+<li>  ordered list with list elements inside
+<ol>+<li>  ordered list with list elements inside (also ul)
       
 14. explains imgs and att
 15. explains anchors (how to create a new tab)
 16. page structure with html elements
 
+CSS symbols
 https://css-tricks.com/snippets/html/glyphs/
 
 select more than one CSS h1, h2 h3 {}
@@ -79,12 +113,15 @@ id -> #abc
 class -> .abc
 
 28. pseudo classes class:first-child etc.
-
 34. padding and margin
 36. adding dimensions. telling how big images and squares should be like
-
 39. display: X; to change types of boxes
 40. Absolute positioning.
+41. Pseudo elements. Double ::
+siblings selector
+::after to add content
+54. change order of flexbox
+55. flex shrink grow basis
 
 
 https://www.thomann.de/es/index.html
