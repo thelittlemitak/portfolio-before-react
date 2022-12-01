@@ -11,11 +11,15 @@
 
 body {
   font-family: Verdana, sans-serif;
-    background-color: rgba(0, 255, 255, 0.087);
+  background-color: rgba(0, 255, 255, 0.087);
 }
 
 h4 {
   font-size: 40px;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* HEADER */
@@ -72,7 +76,7 @@ h4 {
 
 .main-header-buttons:hover {
   background-color: rgb(182, 221, 255);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 #sign-up-button {
@@ -105,9 +109,9 @@ h4 {
   box-shadow: 10px 10px;
 
   display: flex;
-flex-direction: column; 
-gap: 10px;
- padding-left: 30px;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 30px;
   padding-bottom: 40px;
   padding-top: 60px;
   /* padding-top: 100px;
@@ -149,7 +153,7 @@ gap: 10px;
 
 #section1c {
   margin-top: 40px;
-  font-size: 40px;
+  font-size: 38px;
 }
 
 .section-button {
@@ -163,6 +167,10 @@ gap: 10px;
   background-color: aliceblue;
 }
 
+.section-button:hover {
+  background-color: rgb(182, 221, 255);
+  transition: 0.3s;
+}
 
 /* SECTION 2 */
 
@@ -173,9 +181,8 @@ gap: 10px;
   margin-right: 60px;
   display: flex;
   justify-content: space-between;
-  gap: 50px;  
+  gap: 50px;
   margin-bottom: 50px;
-
 }
 
 .tab {
@@ -186,16 +193,16 @@ gap: 10px;
   gap: 20px;
   width: 100%;
   border: 3px solid;
-  align-items:center;
+  align-items: center;
   background-color: rgba(0, 255, 255, 0.204);
-
-
+  box-shadow: 10px 10px;
 }
 
 .arrow {
   /* margin-top: 150px; */
   text-align: center;
-font-size: 40px;}
+  font-size: 40px;
+}
 
 /* FOOTER */
 
@@ -208,5 +215,49 @@ footer {
 .abc {
   text-align: center;
   margin-bottom: 100px;
+}
 
+/*
+* PROFILE STUFF
+*/
+
+.main-profile {
+  font-size: 30px;
+}
+
+#alias {
+  text-align: center;
+  margin-top: 30px;
+  text-decoration: underline;
+  margin-bottom: 70px;
+  font-size: 40px;
+
+}
+
+.goal-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-between;
+}
+
+.goal {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 30px;
+}
+
+.gridcheckbox {
+  height: 30px;
+  width: 30px;
+}
+
+.holi {
+  grid-column: 1 / span 2;
+  /* TRACKS INSIDE CONTAINER */
+  justify-content: center;
+  align-content: center;
+
+  /* ITEMS INSIDE CELLS */
+  align-items:center;
+  justify-items: center;
 }
