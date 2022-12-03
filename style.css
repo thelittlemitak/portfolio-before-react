@@ -1,4 +1,38 @@
-/* UNIVERSAL SELECTOR */
+/* FONT SCALE
+10 12 14 16 18 20 24 30 36 44 52 62 74 86 98 */
+
+/*
+TINTS OF THE GREEN - https://www.colorhexa.com/c5fae4
+
+BACKGROUND
+#e9fdf5
+
+SUPER LIGHT
+#d7fcec
+
+LIGHT
+#c5fae4
+
+MEDIUM-LIGHT
+#b3f8dc
+
+MEDIUM
+#a1f7d3
+
+HARD
+#7df4c2
+
+TOP HARD
+#59f1b2
+
+*/
+
+/*UNIVERSAL SELECTOR */
+
+* /* * ++++++++++++++++++++++++++ INDEX ++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&& ELEMENTS */
+
 
 * {
   margin: 0;
@@ -10,22 +44,25 @@
 /* ELEMENTS */
 
 body {
-  font-family: Verdana, sans-serif;
-  background-color: rgba(0, 255, 255, 0.087);
+  /* font-family: Verdana; */
+  font-family: 'work sans', verdana;
+  /* background-color: rgba(0, 255, 255, 0.087); */
+  background-color: #e9fdf5;
+
 }
 
 h4 {
-  font-size: 40px;
+  font-size: 44px;
 }
 
 button {
   cursor: pointer;
 }
 
-/* HEADER */
+/* &&&&&&&&&&&&&&&&&&&&&&&&& HEADER */
 
 .main-header {
-  font-size: 26px;
+  font-size: 24px;
 
   padding-top: 16px;
   padding-bottom: 32px;
@@ -34,11 +71,12 @@ button {
   align-items: center;
   justify-content: space-evenly;
 
-  background-color: rgba(0, 255, 255, 0.204);
+  background-color: #d7fcec;
 }
 
 .logo-box {
-  font-size: 50px;
+  font-family: verdana;
+  font-size: 52px;
 
   padding: 5px;
   padding-right: 15px;
@@ -48,9 +86,9 @@ button {
   display: flex;
   align-items: baseline;
 
-  background-color: aliceblue;
+  background-color: #e9fdf5;
 
-  translate: -80px 0px;
+  /* translate: -80px 0px; */
 }
 
 #logo-a {
@@ -64,32 +102,44 @@ button {
 }
 
 .main-header-buttons {
-  font-size: 22px;
+  font-size: 24px;
   font-family: Verdana, sans-serif;
 
   padding: 10px;
   border: 3px solid;
   box-shadow: 10px 10px;
 
-  background-color: aliceblue;
+  background-color: #e3fafc;
 }
 
 .main-header-buttons:hover {
-  background-color: rgb(182, 221, 255);
+  background-color: #7df4c2;
   transition: 0.3s;
 }
 
 #sign-up-button {
-  background-color: rgb(198, 228, 255);
+  background-color: #a1f7d3;
+}
+
+#sign-up-button:hover {
+  background-color: #59f1b2;
 }
 
 #button-area {
   display: flex;
+  justify-content: space-between;
   gap: 100px;
-  translate: 50px 0px;
+  translate: 90px 0px;
 }
 
-/* HERO */
+.question {
+  translate: 0px 35px;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&& HERO */
 
 .hero {
   margin-top: 50px;
@@ -112,8 +162,8 @@ button {
   flex-direction: column;
   gap: 10px;
   padding-left: 30px;
-  padding-bottom: 40px;
-  padding-top: 60px;
+  padding-bottom: 20px;
+  padding-top: 40px;
   /* padding-top: 100px;
   padding-bottom: 100px; */
 
@@ -121,7 +171,8 @@ button {
   flex-grow: 1;
   flex-shrink: 1; */
 
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
+  background-color: #b3f8dc;
 }
 
 #right-hero {
@@ -144,7 +195,11 @@ button {
   background-color: rgb(255, 127, 127);
 }
 
-/* SECTION 1 */
+
+
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&& SECTION 1 */
 #section1 {
   text-align: center;
   line-height: 100px;
@@ -153,29 +208,33 @@ button {
 
 #section1c {
   margin-top: 40px;
-  font-size: 38px;
+  font-size: 36px;
 }
 
 .section-button {
-  font-size: 26px;
+  font-size: 24px;
   font-family: Verdana, sans-serif;
 
   padding: 10px;
   border: 3px solid;
   box-shadow: 10px 10px;
 
-  background-color: aliceblue;
+  background-color: #d7fcec;
 }
 
 .section-button:hover {
-  background-color: rgb(182, 221, 255);
+  background-color: #59f1b2;
   transition: 0.3s;
 }
 
-/* SECTION 2 */
+
+
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&& SECTION 2 */
 
 #section2 {
-  font-size: 26px;
+  font-size: 24px;
   /* margin-bottom: 50px; */
   margin-left: 60px;
   margin-right: 60px;
@@ -194,7 +253,7 @@ button {
   width: 100%;
   border: 3px solid;
   align-items: center;
-  background-color: rgba(0, 255, 255, 0.204);
+  background-color: #b3f8dc;
   box-shadow: 10px 10px;
 }
 
@@ -204,10 +263,13 @@ button {
   font-size: 40px;
 }
 
-/* FOOTER */
+
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&& FOOTER */
 
 footer {
-  font-size: 22px;
+  font-size: 24px;
   margin-left: 10px;
   margin-bottom: 10px;
 }
@@ -217,8 +279,15 @@ footer {
   margin-bottom: 100px;
 }
 
+
+
+
+
+
+
+
 /*
-* PROFILE STUFF
+* ++++++++++++++++++++++++++ PROFILE ++++++++++++++++++++++++++++++++++++++++++++
 */
 
 .main-profile {
@@ -228,10 +297,9 @@ footer {
 #alias {
   text-align: center;
   margin-top: 30px;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   margin-bottom: 70px;
-  font-size: 40px;
-
+  font-size: 44px;
 }
 
 .goal-list {
@@ -251,13 +319,6 @@ footer {
   width: 30px;
 }
 
-.holi {
-  grid-column: 1 / span 2;
-  /* TRACKS INSIDE CONTAINER */
-  justify-content: center;
-  align-content: center;
-
-  /* ITEMS INSIDE CELLS */
-  align-items:center;
-  justify-items: center;
-}
+/* .upper {
+  text-transform: uppercase;
+} */
