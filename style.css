@@ -327,6 +327,10 @@ button {
   margin-bottom: 50px;
 }
 
+.icon {
+  height: 40px;
+}
+
 .tab {
   padding-top: 30px;
   padding-bottom: 30px;
