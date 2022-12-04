@@ -115,7 +115,7 @@ button {
   display: flex;
   align-items: baseline;
 
-  background-color: #e9fdf5;
+  background-color: #b3f8dc;
 
   /* translate: -80px 0px; */
 }
@@ -288,7 +288,7 @@ button {
   border: 3px solid;
   box-shadow: 10px 10px;
 
-  background-color: #f47dae;
+  background-color: #f7a1c5;
 }
 
 .section-button:hover {
