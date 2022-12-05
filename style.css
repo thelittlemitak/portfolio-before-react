@@ -39,6 +39,10 @@ MEDIUM-LIGHT
 #fac5db
 MEDIUM
 #f7a1c5
+
+X
+#f58fb9
+
 HARD
 #f47dae
 TOP HARD
@@ -416,7 +420,7 @@ footer {
 
 .faq-cont1 {
   width: 800px;
-  height: 100px;
+  height: 90px;
   margin-left: 100px;
   /* margin-bottom: 10px; */
   display: grid;
@@ -435,13 +439,11 @@ footer {
   margin-left: 35px;
   font-size: 38px;
   margin-right: 20px;
-  font-weight: 700;
-
-
+  font-weight: 100;
 }
 
 .faq-question {
-  font-weight: 700;
+  /* font-weight: 100; */
   justify-self:left;
 
 }
@@ -456,7 +458,7 @@ footer {
 .faq-cont2 {
   margin-left: 140px;
   background-color:#fac5db;
-  border: 3px solid;
+  border: 3px solid #212529;
   box-shadow: 10px 10px;
   margin-right: 90px;
   padding-left: 50px;
@@ -466,12 +468,22 @@ footer {
 }
 
 .open-question {
-  background-color: #f47dae;
+  background-color:#f7a1c5;
   translate: 0 10px;
   z-index: -1;
+  font-weight: 700;
+
 }
 
 .open-answer {
   background-color:#f7a1c5;
   z-index: 2;
+  position: relative;
+  font-weight: 500;
+  /* display: none; */
+}
+
+.open-number {
+  font-weight: 700;
+
 }
