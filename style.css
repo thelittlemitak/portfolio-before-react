@@ -1,6 +1,9 @@
 /* FONT SCALE
 10 12 14 16 18 20 24 30 36 44 52 62 74 86 98 */
 
+/* SCALE
+2 4 8 12 16 24 32 48 64 80 96 128 */
+
 /*
 TINTS OF THE GREEN - https://www.colorhexa.com/c5fae4
 
@@ -84,7 +87,6 @@ body {
   background-color: #e9fdf5;
   color: #212529;
   border-bottom: 5px solid #7df4c2;
-
 }
 
 h4 {
@@ -101,7 +103,7 @@ button {
 .main-header {
   font-size: 24px;
 
-  padding-top: 16px;
+  padding-top: 24px;
   padding-bottom: 32px;
 
   display: flex;
@@ -124,6 +126,8 @@ button {
   align-items: baseline;
 
   background-color: #a1f7d3;
+
+  cursor: pointer;
 
   /* translate: -80px 0px; */
 }
@@ -172,10 +176,20 @@ button {
 
 .question {
   translate: 0px 65px;
+  padding: 0px 10px 10px 10px;
   margin-right: 60px;
   font-weight: 700;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   cursor: pointer;
+  border: 3px solid;
+  box-shadow: 7px 7px;
+  height: 34px;
+  background-color: #fde9f1;
+}
+
+.question:hover {
+  background-color: #22ec98;
+  transition: 0.3s;
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&& HERO */
@@ -211,7 +225,7 @@ button {
 
   /* width: 100%; */
   border: 3px solid;
-  box-shadow: 10px 10px;
+  box-shadow: 7px 7px;
   line-height: 70px;
   /* display: flex;
   flex-direction: column;
@@ -240,7 +254,7 @@ button {
 
   width: 100%;
   border: 3px solid;
-  box-shadow: 10px 10px;
+  box-shadow: 7px 7px;
 
   display: grid;
   justify-content: space-around;
@@ -262,7 +276,7 @@ button {
   /* display: flex; */
   /* justify-content: center; */
   justify-self: center;
-  grid-column: 2/ span 2;
+  grid-column: 2 / span 2;
   /* margin-left: 30px; */
   font-weight: 700;
 }
@@ -316,7 +330,7 @@ button {
 
 .imgflex {
   border: 3px solid;
-  box-shadow: 10px 10px;
+  box-shadow: 7px 7px;
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&& SECTION 2 */
@@ -348,7 +362,7 @@ button {
   border: 3px solid;
   align-items: center;
   background-color: #b3f8dc;
-  box-shadow: 10px 10px;
+  box-shadow: 7px 7px;
   font-size: 36px;
 }
 
@@ -356,6 +370,81 @@ button {
   margin-bottom: 20px;
   text-align: center;
   font-size: 40px;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&& CAROUSEL */
+/* FONT SCALE
+10 12 14 16 18 20 24 30 36 44 52 62 74 86 98 */
+
+.carousel {
+  background-color: #f7a1c5;
+  width: 1200px;
+  height: 400px;
+  margin: 100px auto;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 3px solid;
+  box-shadow: 7px 5px;
+  position: relative;
+}
+
+.testimonial-img {
+  border: 3px solid;
+  box-shadow: 10px 10px;
+  transform: scale(0.75);
+}
+
+.testimonial-text {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-right: 30px;
+  line-height: 50px;
+}
+
+.testimonial-name {
+  font-size: 20px;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.testimonial-description {
+  font-size: 20px;
+  font-weight: 500;
+
+}
+
+.carousel-button {
+  height: 50px;
+  width: 50px;
+  border: 3px solid;
+  box-shadow: 10px 10px;
+  position: absolute;
+  background-color: #7df4c2;
+}
+
+.carousel-button-left {
+  left: 0;
+}
+.carousel-button-right {
+  right: 0;
+}
+
+.ready-button {
+  font-size: 24px;
+  font-family: Verdana, sans-serif;
+
+  padding: 10px;
+  border: 3px solid;
+  box-shadow: 10px 10px;
+
+  background-color: #7df4c2;
+}
+
+.ready-button:hover {
+  background-color: #f47dae;
+  transition: 0.3s;
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&& FOOTER */
@@ -413,9 +502,27 @@ footer {
 
 .about-main {
   margin-top: 96px;
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: 50px;
   color: #212529;
+}
+
+.about-hero {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.about-hero-left {
+  height: 500px;
+  width: 1600px;
+  background-color: #212529;
+}
+
+.about-hero-right {
+  font-size: 52px;
+  /* height: 500px; */
+  /* background-color: red; */
 }
 
 .faq-cont1 {
@@ -429,7 +536,7 @@ footer {
   /* column-gap: 50px; */
   /* gap: 30px; */
   align-items: center;
-  background-color:#fac5db;
+  background-color: #fde9f1;
   border: 3px solid;
   box-shadow: 00px 00px;
   margin-bottom: 1px;
@@ -444,8 +551,7 @@ footer {
 
 .faq-question {
   /* font-weight: 100; */
-  justify-self:left;
-
+  justify-self: left;
 }
 
 .faq-icon {
@@ -456,27 +562,30 @@ footer {
 }
 
 .faq-cont2 {
+  font-size: 24px;
+
   margin-left: 140px;
-  background-color:#fac5db;
+  background-color: #fac5db;
   border: 3px solid #212529;
   box-shadow: 10px 10px;
   margin-right: 90px;
-  padding-left: 50px;
+  /* padding-left: 50px; */
+  padding: 15px 0px 15px 50px;
   margin-bottom: 11px;
+  transition: 0.5s;
   /* display: none; */
-
 }
 
 .open-question {
-  background-color:#f7a1c5;
+  /* background-color: #fac5db; */
   translate: 0 10px;
   z-index: -1;
   font-weight: 700;
-
+  /* display: none; */
 }
 
 .open-answer {
-  background-color:#f7a1c5;
+  background-color: #fac5db;
   z-index: 2;
   position: relative;
   font-weight: 500;
@@ -485,5 +594,57 @@ footer {
 
 .open-number {
   font-weight: 700;
-
 }
+
+/*
+TINTS OF THE GREEN - https://www.colorhexa.com/c5fae4
+
+BACKGROUND
+#e9fdf5
+
+SUPER LIGHT
+#d7fcec
+
+LIGHT
+#c5fae4
+
+MEDIUM-LIGHT
+#b3f8dc
+
+MEDIUM
+#a1f7d3
+
+HARD
+#7df4c2
+
+TOP HARD
+#59f1b2
+
+DEATH STRONG
+#22ec98
+
+TINTS OF THE PINK - https://www.colorhexa.com/fac5db
+
+BACKGROUND
+SUPER LIGHT
+#fde9f1
+LIGHT
+#fcd7e6
+MEDIUM-LIGHT
+#fac5db
+MEDIUM
+#f7a1c5
+
+X
+#f58fb9
+
+HARD
+#f47dae
+TOP HARD
+
+
+/* FONT SCALE
+10 12 14 16 18 20 24 30 36 44 52 62 74 86 98 */
+
+/* SCALE
+2 4 8 12 16 24 32 48 64 80 96 128 */
