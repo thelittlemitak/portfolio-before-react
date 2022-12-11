@@ -388,6 +388,7 @@ button {
   border: 3px solid;
   box-shadow: 7px 5px;
   position: relative;
+  margin-bottom: 56px;
 }
 
 .testimonial-img {
@@ -412,7 +413,6 @@ button {
 .testimonial-description {
   font-size: 20px;
   font-weight: 500;
-
 }
 
 .carousel-button {
@@ -426,9 +426,33 @@ button {
 
 .carousel-button-left {
   left: 0;
+  transform: translate(-50%);
 }
 .carousel-button-right {
   right: 0;
+  transform: translate(50%);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 64px;
+  align-items: center;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  background-color: #f7a1c5;
+  border: 3px solid;
+  cursor: pointer;
+}
+
+.selected-dot {
+  background-color: #22ec98;
+  width: 16px;
+  height: 16px;
 }
 
 .ready-button {
@@ -471,13 +495,59 @@ footer {
 
 #alias {
   text-align: center;
-  margin-top: 30px;
-  /* text-decoration: underline; */
-  margin-bottom: 70px;
+  margin: 64px 64px;
   font-size: 44px;
 }
 
-.goal-list {
+.profile-table {
+  width: 1100px;
+  background-color:#d7fcec;
+  margin: 0px auto 100px auto;
+  border: 2px solid;
+  border-collapse: collapse;
+}
+
+tbody tr:nth-child(even) {
+  background-color:#c5fae4;
+}
+
+th,
+td {
+  border: 2px solid;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}
+
+th {
+  background-color: #fac5db;
+}
+
+.table-top {
+  background-color: #f7a1c5;
+}
+
+.table-goal {
+  text-align: left;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  border: none;
+}
+
+.table-checkbox {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* .goal-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-content: space-between;
@@ -492,7 +562,7 @@ footer {
 .gridcheckbox {
   height: 30px;
   width: 30px;
-}
+} */
 
 /* .upper {
   text-transform: uppercase;
