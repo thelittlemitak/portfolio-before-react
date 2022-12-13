@@ -424,6 +424,10 @@ button {
   background-color: #7df4c2;
 }
 
+.carousel-button:hover {
+  background-color:#22ec98;
+}
+
 .carousel-button-left {
   left: 0;
   transform: translate(-50%);
@@ -499,10 +503,50 @@ footer {
   font-size: 44px;
 }
 
+.add-goal-action {
+  width: 600px;
+  display:block;
+  font-size: 24px;
+  margin: 48px auto 100px;
+  background-color:#fde9f1;
+  /* border-radius: 30px; */
+  padding: 2px 10px;
+  border: 1px solid;
+  box-shadow: 5px 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.add-goal-action-v2 {
+  cursor: pointer;
+  background-color:#fde9f1;
+
+}
+
+.dummy-goal {
+  cursor: pointer;
+  background-color:#fde9f1;
+}
+
+.h2-profile {
+  text-align: center;
+  margin-bottom: 60px;
+  text-decoration: underline;
+}
+
+.h3-profile {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.add-goal-action:hover {
+  background-color: #7df4c2;
+}
+
 .profile-table {
   width: 1100px;
   background-color:#d7fcec;
-  margin: 0px auto 100px auto;
+  margin: 0px auto 75px auto;
   border: 2px solid;
   border-collapse: collapse;
 }
