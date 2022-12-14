@@ -17,7 +17,7 @@
   <body>
     <!-- HEADER -->
 
-    <header class="main-header">
+    <header class="main-header profile-header">
       <div class="logo-box">
         M
         <div id="logo-a">ore</div>
@@ -28,15 +28,14 @@
       </div>
       <div id="slogan"></div>
       <div id="button-area">
-        <button class="main-header-buttons"><strong>LOGIN</strong></button>
-        <button class="main-header-buttons" id="sign-up-button">
-          <strong>SIGN UP</strong>
-        </button>
+        <div class="id-salute">Hi,&nbsp<div id="id-profile" class="id-salute">thelittle</div></strong></div>
+        <button class="guide"><strong>GUIDE</strong></button>
+
         <div class="question">...about</div>
       </div>
     </header>
     <main class="main-profile">
-      <div id="alias">the little mitak</div>
+      <!-- <div id="alias">Hi, thelittlemitak!</div> -->
 
       <!-- GOAL SECTION -->
 <!-- * hola -->
@@ -44,8 +43,8 @@
 <!-- * hola -->
 <!-- * hola -->
 <!-- * hola -->
-      <h2 class="h2-profile"">Goals overview</h2>
-
+      <!-- <h2 class="h2-profile"">Goals</h2> -->
+        <!-- <p>All the goals you chose together with some basic</p> -->
       <h3 class="h3-profile"">Temporary goals</h3>
       <table class="profile-table">
         <thead>
@@ -120,7 +119,7 @@
 <!-- * hola -->
 <!-- * hola -->
 
-      <h3 class="h3-profile""">Continuous goals that are time dependent</h3>
+      <h3 class="h3-profile""">Continuous goals (time dependent)</h3>
       <table class="profile-table">
         <thead>
           <th class="table-top">Goal</th>
@@ -166,7 +165,7 @@
 <!-- * hola -->
 <!-- * hola -->
 
-      <h3 class="h3-profile">Continuous goals that are action dependent</h3>
+      <h3 class="h3-profile">Continuous goals (action dependent)</h3>
       <table class="profile-table">
         <thead>
           <th class="table-top">Goal</th>
@@ -207,17 +206,24 @@
       <button class="add-goal-action">+ add continuous action dependent goal +</button>
 
 
-      <h2 class="h2-profile">Priorities</h2>
+      <h3 class="h3-profile"">Priorities</h3>
       <table class="profile-table">
         <thead>
           <th class="table-top">Priority</th>
           <th class="table-top">Goal</th>
+          <th class="table-top">Change priority</th>
           <th class="table-top">Done for today?</th>
         </thead>
         <tbody>
           <tr>
             <th class="table-goal">#1</th>
             <td>Rest</td>
+            <td class="drag-cell">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="drag-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            </td>
+
             <td>
               <div class="checkbox-container">
                 <input type="checkbox" class="table-checkbox" />
@@ -228,6 +234,12 @@
           <tr>
             <th class="table-goal">#2</th>
             <td>Diet</td>
+            <td class="drag-cell">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="drag-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </td>
+
             <td>
               <div class="checkbox-container">
                 <input type="checkbox" class="table-checkbox" />
@@ -238,6 +250,12 @@
           <tr>
             <th class="table-goal">#3</th>
             <td>Meditate</td>
+            <td class="drag-cell">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="drag-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </td>
+
             <td>
               <div class="checkbox-container">
                 <input type="checkbox" class="table-checkbox" />
@@ -247,7 +265,28 @@
           </tr>
           <tr>
             <th class="table-goal">#4</th>
+            <td>Exercise</td>
+            <td class="drag-cell">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="drag-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </td>
+
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" class="table-checkbox" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th class="table-goal">#5</th>
             <td>Data</td>
+            <td class="drag-cell">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="drag-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </td>
+
             <td>
               <div class="checkbox-container">
                 <input type="checkbox" class="table-checkbox" />
