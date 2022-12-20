@@ -565,7 +565,7 @@ footer {
 }
 
 .profile-header {
-  margin-bottom: 80px;
+  padding-bottom: 40px;
 }
 
 .add-goal-action-v2 {
@@ -589,8 +589,15 @@ footer {
 }
 
 .h3-profile {
-  margin-bottom: 50px;
+  padding: 29px 0px 39px 0px;
   text-align: center;
+  font-size: 44px;
+  /* text-decoration: underline; */
+  background: linear-gradient(#fde9f1, #e9fdf5);
+    /* border-bottom: 2px solid black; */
+  border-top: 2px solid;
+  /* border-collapse: collapse; */
+  /* color: linear-gradient(to red); */
 }
 
 .add-goal-action:hover {
@@ -600,7 +607,7 @@ footer {
 .profile-table {
   width: 1100px;
   background-color:#d7fcec;
-  margin: 0px auto 75px auto;
+  margin: 0px auto 80px auto;
   border: 2px solid;
   border-collapse: collapse;
 }
