@@ -1,0 +1,141 @@
+/*
+* ++++++++++++++++++++++++++ PROFILE ++++++++++++++++++++++++++++++++++++++++++++
+* ++++++++++++++++++++++++++ PROFILE ++++++++++++++++++++++++++++++++++++++++++++
+* ++++++++++++++++++++++++++ PROFILE ++++++++++++++++++++++++++++++++++++++++++++
+* ++++++++++++++++++++++++++ PROFILE ++++++++++++++++++++++++++++++++++++++++++++
+* ++++++++++++++++++++++++++ PROFILE ++++++++++++++++++++++++++++++++++++++++++++
+* ++++++++++++++++++++++++++ PROFILE ++++++++++++++++++++++++++++++++++++++++++++
+* ++++++++++++++++++++++++++ PROFILE ++++++++++++++++++++++++++++++++++++++++++++
+* ++++++++++++++++++++++++++ PROFILE ++++++++++++++++++++++++++++++++++++++++++++
+* ++++++++++++++++++++++++++ PROFILE ++++++++++++++++++++++++++++++++++++++++++++
+* ++++++++++++++++++++++++++ PROFILE ++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&& HEADER */
+
+.profile-header {
+  padding-bottom: 4rem;
+}
+
+.id-salute {
+  display: flex;
+  font-size: 3.6rem;
+  align-self: flex-end;
+}
+
+#id-profile {
+  font-weight: 700;
+}
+
+.guide-button {
+  font-size: 2.4rem;
+  font-family: Verdana, sans-serif;
+
+  padding: 1rem;
+  border: 0.3rem solid;
+  box-shadow: 1rem 1rem;
+
+  background-color: #e3fafc;
+  background-color: #f47dae;
+  transition: 0.2s;
+}
+
+.guide-button:hover {
+  background-color: #22ec98;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&& SECTION */
+
+.main-profile-container {
+  font-size: 3rem;
+}
+
+.h3-profile {
+  padding: 2.9rem 0rem 3.9rem 0rem;
+  text-align: center;
+  font-size: 4.4rem;
+  background: linear-gradient(#fde9f1, #e9fdf5);
+  border-top: 0.2rem solid;
+}
+
+.profile-table {
+  width: 110rem;
+  background-color: #d7fcec;
+  margin: 0rem auto 8rem auto;
+  border: 0.2rem solid;
+  border-collapse: collapse;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #c5fae4;
+}
+
+th,
+td {
+  border: 0.2rem solid;
+  text-align: center;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+th {
+  background-color: #fac5db;
+}
+
+.table-top {
+  background-color: #f7a1c5;
+}
+
+.table-goal {
+  text-align: left;
+}
+
+.add-goal-plus-button {
+  cursor: pointer;
+  background-color: #fde9f1;
+}
+
+.add-goal-plus-button:hover {
+  background-color: #f47dae;
+  transition: 0.2s;
+}
+
+.dummy-goal-row {
+  background-color: #fde9f1;
+}
+
+/* ???????????? */
+.add-goal-action:hover {
+  background-color: #7df4c2;
+}
+
+.drag-icon {
+  height: 4.2rem;
+  width: 4.2rem;
+  translate: -0rem 0.3rem;
+}
+
+.drag-cell {
+  cursor: grab;
+  background-color: #fde9f1;
+  padding: 0;
+}
+.drag-cell:hover {
+  cursor: grab;
+  background-color: #f47dae;
+  padding: 0;
+  transition: 0.1s;
+}
+
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  border: none;
+}
+
+.table-checkbox {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
