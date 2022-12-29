@@ -1,0 +1,132 @@
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 10rem;
+  margin: auto auto;
+  width: 42rem;
+  background-color: #f7a1c5;
+  border: 0.4rem solid;
+  box-shadow: 0.7rem 0.7rem;
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-left: 5rem;
+  margin-right: 20%;
+  gap: 1rem;
+}
+
+.sign-up-alert {
+  font-size: 1.5rem;
+}
+
+.dummy-margin {
+  margin-top: 10rem;
+}
+
+.form-button {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #c5fae4;
+  border: 0.2rem solid;
+  box-shadow: 0.4rem 0.4rem;
+  width: 20rem;
+  padding: 1rem 1rem;
+  margin: 3.4rem auto 4rem auto;
+}
+
+.form-button:hover {
+  transform: translate(0rem, 0.3rem);
+  box-shadow: none;
+
+}
+
+.form-goals-column {
+  margin-top: 1rem;
+  border: 1px solid;
+  font-size: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-collapse: collapse;
+  margin-right: -10%;
+  background-color: #e9fdf581;
+}
+
+.form-goals-column div {
+  display: flex;
+  justify-content: center;
+  border: 1px solid;
+  padding: 1.5rem ;
+}
+
+.form-goals-column div:hover {
+  background-color: #7df4c2;
+  cursor: pointer;
+  
+}
+
+.new-goal-cell {
+  background-color: #c5fae4;
+}
+.new-goal-cell:hover {
+  cursor: pointer;
+  /* text-decoration: underline; */
+  background-color: #f3619e !important;
+}
+
+
+input {
+  background-color: #c5fae4;
+  padding: 1rem 1rem;
+}
+
+
+
+
+select {
+  font-size: 1.5rem;
+  background-color: #c5fae4;
+  padding: 1rem 1rem;
+}
+
+/* label {
+  text-align: center;
+} */
+
+/* BACKGROUND
+#e9fdf5
+SUPER LIGHT
+#d7fcec
+LIGHT
+#c5fae4
+MEDIUM-LIGHT
+#b3f8dc
+MEDIUM
+#a1f7d3
+HARD
+#7df4c2
+TOP HARD
+#59f1b2
+DEATH STRONG
+#22ec98 */
+
+/* BACKGROUND
+SUPER LIGHT
+#fde9f1
+LIGHT
+#fcd7e6
+MEDIUM-LIGHT
+#fac5db
+MEDIUM
+#f7a1c5
+X
+#f58fb9
+HARD
+#f47dae
+TOP HARD
+DEATH STRONG */
