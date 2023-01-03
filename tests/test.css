@@ -7,6 +7,7 @@
   z-index: 1;
 }
 
+
 .d2 {
   background-color: rgb(240, 0, 0);
   height: 100px;
@@ -71,4 +72,55 @@
   box-shadow: 1rem 1rem;
 
   display: none;
+}
+
+#experiment1 {
+  display: none;
+}
+
+/****************************** EXPERIMENT 2 */
+
+.x2-flex-container {
+  max-width: 800px;
+  display: flex;
+}
+
+.x2-div1 {
+  background-color: #fac5db;
+  width: 100px;
+}
+
+.x2-div2 {
+  width: 100px;
+  background-color:blue;
+}
+
+.x2-div3 {
+  width: 100px;
+  background-color:brown;
+}
+
+#experiment2 {
+  display: none;
+}
+
+/****************************** EXPERIMENT 3 */
+body {
+  font-size: 30px;
+}
+.button-area-1 {
+  text-align: center;
+  background-color: blueviolet;
+  padding-left: 90px;
+}
+.button-area-2 {
+  display: flex;
+  justify-content:space-around;
+  background-color:aqua;
+  padding-right: 80px;
+}
+
+.x3-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

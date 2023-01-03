@@ -16,6 +16,10 @@ html {
   font-size: 62.5%;
 }
 
+/* header {
+  width: 100%;
+} */
+
 body {
   font-family: "work sans", verdana;
 
@@ -23,6 +27,12 @@ body {
   background-color: #e9fdf5;
 
   border-bottom: 0.5rem solid #7df4c2;
+  /* padding: 0px 30px; */
+}
+
+main {
+    padding: 0px 38px;
+
 }
 
 h4 {

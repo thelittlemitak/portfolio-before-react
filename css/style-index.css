@@ -8,12 +8,17 @@
   padding-top: 2.4rem;
   padding-bottom: 3.2rem;
 
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
 }
 
 .logo-box {
+  width: 28rem;
   font-family: verdana;
   font-size: 5.2rem;
 
@@ -46,16 +51,16 @@
 }
 
 .button-area {
+  /* max-width: 400rem; */
+  width: 100%;
   display: flex;
-
-  justify-content: space-between;
-  gap: 10rem;
-
-  translate: 18rem 0rem;
+  justify-content: space-around;
 }
+
 
 .main-header-buttons:link,
 .main-header-buttons:visited {
+  text-align: center;
   display: inline-block;
 
   font-family: Verdana, sans-serif;
@@ -94,7 +99,7 @@
   background-color: #fde9f1;
 
   padding: 0rem 1rem 1rem 1rem;
-  margin-right: 6rem;
+  /* margin-right: 6rem; */
 
   border: 0.3rem solid;
   box-shadow: 0.7rem 0.7rem;
@@ -113,18 +118,37 @@
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&& HERO */
 
-.graphics-pic {
-  translate: 0rem 2rem;
-}
-
 .hero {
-  height: 41rem;
+  /* height: 41rem; */
 
   margin-top: 9.6rem;
   margin-bottom: 9rem;
 
   display: flex;
   justify-content: center;
+}
+
+.graphics-pic {
+  translate: 0rem 2rem;
+  max-width: 50%;
+  object-fit:contain;
+}
+
+.hero-right-box {
+  max-width: 50rem;
+
+  font-size: 5.2rem;
+  line-height: 7rem;
+
+  background-color: #a1f7d3;
+
+  padding: 2rem 0rem 2rem 5rem;
+
+  margin-left: 1rem;
+
+  border: 0.3rem solid;
+  box-shadow: 0.7rem 0.7rem;
+  transition: all 0.3s;
 }
 
 .hero2 {
@@ -154,23 +178,6 @@
   background-color: #212529;
   height: 8px;
   width: 8px;
-}
-
-.hero-right-box {
-  width: 50rem;
-
-  font-size: 5.2rem;
-  line-height: 7rem;
-
-  background-color: #a1f7d3;
-
-  padding: 2rem 0rem 2rem 5rem;
-
-  margin-left: 1rem;
-
-  border: 0.3rem solid;
-  box-shadow: 0.7rem 0.7rem;
-  transition: all 0.3s;
 }
 
 .hero-right-box:hover {
@@ -258,15 +265,22 @@
 
   display: flex;
   justify-content: space-around;
+
+  /* max-width: 50%; */
+  /* object-fit:contain; */
 }
 
-.imgflex {
+.activities-imgs {
   border: 0.3rem solid;
   box-shadow: 0.7rem 0.7rem;
   transition: all 0.2s;
+  max-width: 50%;
+  object-fit:contain;
+  flex-shrink: 1;
+
 }
 
-.imgflex:hover {
+.activities-imgs:hover {
   transform: translateY(-1rem);
   box-shadow: 1.3rem 1.3rem rgba(0, 0, 0, 0.705);
 
@@ -338,7 +352,7 @@
 
 .carousel-container {
   background-color: #f7a1c5;
-  width: 120rem;
+  max-width: 120rem;
   height: 40rem;
   margin: 10rem auto;
   padding: 3.2rem;
