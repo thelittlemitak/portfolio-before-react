@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff !important;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -47,7 +52,59 @@ a:hover {
 
 footer {
   font-size: 2.4rem;
-  margin-left: 5rem;
+  padding-left: 5rem;
   margin-bottom: 2rem;
   color: #343a40;
+  border-top: 1px solid #343a405b;;
+  padding-top: 8rem;
+}
+
+input {
+  font-family: inherit;
+}
+
+address {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-style: normal;
+}
+
+/* address p a {
+  text-decoration: underline;
+  font-weight: 500;
+} */
+
+.footer-test-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+}
+
+.footer-nav {
+  list-style: none;
+}
+
+.footer-nav li {
+  margin-bottom: 1.5rem;
+}
+
+.copyright-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.social-media-container {
+  font-size: 4rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+  margin-bottom: 3.7rem;
 }

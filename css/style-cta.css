@@ -43,50 +43,56 @@
 .form-button:hover {
   transform: translate(0rem, 0.3rem);
   box-shadow: none;
-
 }
 
-.form-goals-column {
+.form-goals-grid {
   margin-top: 1rem;
   border: 1px solid;
-  font-size: 2.5rem;
+  font-size: 1.9rem;
+  font-weight: 100;
+  color: rgb(55, 55, 55);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   border-collapse: collapse;
-  margin-right: -10%;
-  background-color: #e9fdf581;
+  margin-right: -14%;
+  background-color: #c5fae4;
 }
 
-.form-goals-column div {
+.form-goals-grid div {
   display: flex;
   justify-content: center;
-  border: 1px solid;
-  padding: 1.5rem ;
+  /* border: 1px dashed; */
+  padding: 2rem 0rem;
 }
 
-.form-goals-column div:hover {
+.form-goals-grid div:hover {
   background-color: #7df4c2;
   cursor: pointer;
-  
+  box-shadow: 0 0 0 1px #000;
+  color: black;
 }
 
 .new-goal-cell {
+  color: #212529;
   background-color: #c5fae4;
+  grid-column: 1 /4;
+  box-shadow: 0 0 0 1.2px #000;
+  border-collapse: collapse;
+  height: 1rem;
+  align-items: center;
+  background-color: #f58fb9  !important;
 }
 .new-goal-cell:hover {
+  color: #000;
   cursor: pointer;
   /* text-decoration: underline; */
   background-color: #f3619e !important;
 }
 
-
 input {
   background-color: #c5fae4;
   padding: 1rem 1rem;
 }
-
-
-
 
 select {
   font-size: 1.5rem;

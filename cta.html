@@ -12,7 +12,9 @@
     />
     <link href="/css/style-elements.css" rel="stylesheet" />
     <link href="/css/style-cta.css" rel="stylesheet" />
-    <title>Document</title>
+    <link href="/css/style-queries.css" rel="stylesheet" />
+
+    <title>Sing up</title>
   </head>
   <body>
     <div class="dummy-margin"></div>
@@ -22,57 +24,36 @@
         <input
           id="full-name"
           type="text"
-          placeholder=":accomplisher92"
+          placeholder="myalias"
           required
         />
       </div>
 
       <div class="form-section">
         <label for="email">Email address</label>
-        <input id="email" type="email" placeholder="me@example.com" required />
+        <input id="email" type="email" placeholder="my@email.com" required />
       </div>
 
       <div class="form-section">
         <div>Goals</div>
-        <div class="form-goals-column">
-          <div>Health</div>
+        <div class="form-goals-grid">
           <div>Network</div>
-          <div>Money</div>
+          <div>Health</div>
           <div>Creativity</div>
-          <div>Free time</div>
+          <div>Money</div>
           <div>Languages</div>
-          <div>Exercice</div>
           <div>Music</div>
+          <div>Free time</div>
+          <div>Exercice</div>
           <div>Learning</div>
           <div class="new-goal-cell">Add new</div>
-
         </div>
       </div>
-      <!-- <div class="form-section">
-        <label for="goals">Select your goals</label>
-        <p class="sign-up-alert">You can change them later</p>
-        <select id="goals" required>
-          <option value="">Preset goals:</option>
-          <option value="X">Health</option>
-          <option value="x">Network</option>
-          <option value="x">Money</option>
-          <option value="x">Creativity</option>
-          <option value="x">Free time</option>
-          <option value="x">Exercice</option>
-          <option value="x">Music</option>
-          <option value="x">Learning</option>
-        </select>
-      </div> -->
-
       <div class="form-section">
         <label for="new-goal">Add new goal</label>
-        <input id="new-goal" type="string" placeholder="new goal" required />
+        <input id="new-goal" type="string" placeholder="Goal" />
       </div>
-
       <button class="form-button">Sign up</button>
-
-      <!-- <input type="checkbox" />
-      <input type="number" /> -->
     </form>
   </body>
 </html>
