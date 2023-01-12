@@ -259,9 +259,8 @@
 /* &&&&&&&&&&&&&&&&&&&&&&&&& IMAGES */
 
 .image-container {
-  height: 28rem;
-
   margin-top: 8rem;
+  margin-bottom: 5rem;
 
   display: flex;
   justify-content: space-around;
@@ -274,10 +273,10 @@
   border: 0.3rem solid;
   box-shadow: 0.7rem 0.7rem;
   transition: all 0.2s;
-  max-width: 50%;
-  object-fit:contain;
-  flex-shrink: 1;
-
+  max-width: 32%;
+  height: 90%;
+  /* object-fit:contain;
+  flex-shrink: 1; */
 }
 
 .activities-imgs:hover {
@@ -295,8 +294,6 @@
 
 .post-hero-title {
   font-size: 3.6rem;
-
-  margin-top: 9.6rem;
 }
 
 .arrow {
@@ -307,25 +304,23 @@
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&& HOW TO LISTS */
 
-.how-to-lists-container {
+.how-to-lists-section-container {
   font-size: 2.4rem;
 
-  margin: 0rem 6rem 5rem 6rem;
+  /* margin: 0rem 6rem 5rem 6rem; */
 
   display: flex;
-  justify-content: space-between;
-  gap: 5rem;
+  gap: 3rem;
 }
 
-.how-to-lists {
+.how-to-lists-container {
   width: 100%;
   
   font-size: 3.6rem;
   
   background-color: #b3f8dc;
   
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0rem 3rem 0rem;
   
   margin-bottom: 3.2rem;
   
@@ -337,10 +332,41 @@
   gap: 2rem;
   align-items: center;
   transition: all 0.3s;
+}
+
+.list-lines-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.list-individual-lines {
+  display: flex;
+  gap: 1rem;
+}
+
+/* .how-to-lists-container div {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 1rem;
+} */
+
+.how-to-lists-container h4 {
+  align-self: center;
+  margin-bottom: 1rem;
 
 }
 
-.how-to-lists:hover {
+/* .how-to-lists-container p {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: row;
+} */
+
+.how-to-lists-container:hover {
   transform: translateY(-1.5rem);
   box-shadow: 1.2rem 1.2rem rgba(0, 0, 0, 0.705);
 

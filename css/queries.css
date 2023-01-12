@@ -5,17 +5,68 @@
 
 
 
+
 /* 1312px */
 @media (max-width: 82em) {
-  body {
-  
+  .hero-right-box {  
+    font-size: 4.2rem;
+    line-height: 6rem;
+    padding: 2rem 0rem 2rem 3rem;
   }
 
-  .button-area { 
+  .hero-below-table {
+    padding-bottom: 0rem;
+  }
+
+  .hero-below-table-title {
+    margin-bottom: 0rem;
+  }
+
+  .image-container {
+    margin-bottom: 3rem;
   }
 }
+
+/* 1168px */
+@media (max-width: 73em) {
+  .carousel-container {
+    height: 60rem;
+  }
+}
+
+/* 1056 */
+@media (max-width: 66em) {
+  html {
+    font-size: 52.5%;
+  }
+
+  .testimonial-img {
+    transform: scale(0.55);
+    max-width: 50rem;
+  }
+
+  .testimonial-img:hover {
+    transform: scale(0.55) translateY(-1rem);
+  }
+
+  .carousel-container {
+    height: 40rem;
+  }
+
+  .testimonial-text {
+    font-size: 3.6rem;
+    margin-right: 0rem;
+    line-height: 5rem;
+  }
+}
+
+/* 900 */
+@media (max-width: 57em) {
+  
+}
+
 /* 
 FONT SIZE IN PERCENTAGES (ALWAYS CHANGE IT!)
 REM INSIDE
-EM FOR THE MEDIA MAX WIDTH
+EM (16) FOR THE MEDIA MAX WIDTH
  */

@@ -7,9 +7,9 @@
   box-sizing: border-box;
 }
 
+/* A SHADOW WILL CREATE ISSUES */
 *:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #fff !important;
+  outline: 1.3px solid black;
 }
 
 html {
@@ -55,10 +55,9 @@ a {
   transition: all 0.3s;
 }
 
-a:hover {
+/* a:hover {
   transform: translateY(-0.5rem);
-
-}
+} */
 
 footer {
   font-size: 2.4rem;
