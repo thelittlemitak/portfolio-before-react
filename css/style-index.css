@@ -1,5 +1,9 @@
 /* &&&&&&&&&&&&&&&&&&&&&&&&& HEADER */
 
+.index-main {
+  padding: 0px 38px;
+}
+
 .main-header {
   font-size: 2.4rem;
 
