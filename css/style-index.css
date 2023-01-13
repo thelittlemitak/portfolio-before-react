@@ -251,9 +251,12 @@
 
 .icon {
   height: 4rem;
-
+  width: 4rem;
+  flex-shrink: 0;
   /* translate: 0.2rem 0.8rem; */
 }
+
+
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&& IMAGES */
 
@@ -333,6 +336,20 @@
   transition: all 0.3s;
 }
 
+.how-to-lists-container:hover {
+  transform: translateY(-1.5rem);
+  box-shadow: 1.2rem 1.2rem rgba(0, 0, 0, 0.705);
+}
+
+.how-to-lists-container:hover .list-icon {
+  transition: all 0.3s;
+  transform: rotate(360deg);
+}
+
+/* .list-icon {
+  transform: rotate(30deg);
+} */
+
 .list-lines-container {
   display: flex;
   flex-direction: column;
@@ -364,12 +381,6 @@
   flex-direction: row;
 } */
 
-.how-to-lists-container:hover {
-  transform: translateY(-1.5rem);
-  box-shadow: 1.2rem 1.2rem rgba(0, 0, 0, 0.705);
-
-}
-
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&& CAROUSEL */
 
@@ -392,12 +403,13 @@
 .testimonial-img {
   border: 0.3rem solid;
   box-shadow: 1rem 1rem;
-  transform: scale(0.75);
   transition: all 0.2s;
+  height: 45rem;
+  margin: 1rem 4rem;
 }
 
 .testimonial-img:hover {
-  transform: scale(0.75) translateY(-1rem);
+  transform: translateY(-1rem);
   box-shadow: 1.3rem 1.3rem rgba(0, 0, 0, 0.705);
 }
 
@@ -474,7 +486,7 @@
 
   padding: 1rem;
   border: 0.4rem solid;
-  /* box-shadow: 1rem 1rem; */
+  box-shadow: 1rem 1rem;
 
   background-color: #7df4c2;
 }
@@ -482,4 +494,5 @@
 .ready-button:hover {
   background-color:#f7a1c5;
   transform: translateY(-1.5rem);
+  cursor: pointer;
 }

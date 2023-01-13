@@ -121,6 +121,29 @@ body {
 }
 
 .x3-container {
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr;
+} 
+
+/****************************** EXPERIMENT 4 */
+
+.x4-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.x4-a {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+}
+.x4-b {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+}
+
+.x4-a:hover + .x4-b {
+  background-color: red;
 }
