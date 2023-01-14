@@ -13,6 +13,8 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+
 }
 
 /* header {
@@ -26,7 +28,14 @@ body {
   background-color: #e9fdf5;
 
   border-bottom: 0.5rem solid #7df4c2;
+
+  overflow-x: hidden;
+
   /* padding: 0px 30px; */
+}
+
+.hide-overflow-y {
+  overflow-y: hidden;
 }
 
 h4 {
@@ -39,9 +48,9 @@ button {
   transition: all 0.3s;
 }
 
-button:hover {
+/* button:hover {
   transform: translateY(-1rem);
-}
+} */
 
 a {
   text-decoration: none;
@@ -71,6 +80,10 @@ address {
   flex-direction: column;
   gap: 1.5rem;
   font-style: normal;
+}
+
+main {
+  position: relative;
 }
 
 /* address p a {

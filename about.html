@@ -22,7 +22,7 @@
     <!-- HEADER -->
 
     <header class="main-header">
-      <a href="index.html" class="logo-box">
+      <a class="logo-box logo-box--index" href="index.html">
         M
         <div id="logo-a">ore</div>
         M
@@ -31,10 +31,11 @@
         <div id="logo-c">e</div>
       </a>
       <div class="button-area">
-        <a href="#" class="main-header-buttons"><strong>LOGIN</strong></a>
-        <a href="#" class="main-header-buttons" id="sign-up-button">
-          <strong>SIGN UP</strong>
-        </a>
+          <button class="main-header-buttons" id="login-button"><strong>LOGIN</strong></button>
+          <button class="main-header-buttons" id="sign-up-button">
+            <strong>SIGN UP</strong>
+          </button>
+        <a  class="about-button" id="contact-button" href=#footer>...contact</a>
       </div>
     </header>
 
@@ -320,6 +321,63 @@
 
     <!-- FOOTER -->
 
-    <footer><strong>Copyright</strong> &copy 2022 by MoreMoreMe</footer>
-  </body>
+    <footer class="footer-test" id="footer">
+      <div class="footer-test-container">
+        <div>
+          <p class="footer-title">MoreMoreMe</p>
+          <ul class="social-media-container">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+          <div class="copyright-text">
+            <p>Copyright &copy <span class="year"></span></p>
+            <p>All rights reserved</p>
+            
+          </div>
+        </div>
+        <nav>
+          <p class="footer-title">Resources</p>
+          <ul class="footer-nav">
+            <li><a href="about.html">About MoreMoreMe</a></li>
+            <li><a href="#">Privacy & terms</a></li>
+            <li><a href="#">Help center</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer-title">Contact</p>
+          <address>
+            <p>
+              Kreutzigerstr. 10
+            </p>
+            <p>
+              10247 Berlin, Germany
+            </p>
+            <p>
+              <a href="tel:+34654177940">+34654177940</a>
+            </p>
+            <p>
+              <a href="mailto:rieraturjose@gmail.com">rieraturjose@gmail.com</a>
+            </p>
+          </address>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script defer src="js/script.js"></script>
+    </body>
 </html>

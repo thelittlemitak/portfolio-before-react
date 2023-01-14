@@ -13,6 +13,7 @@
     <link href="/css/style-elements.css" rel="stylesheet" />
     <link href="/css/style-index.css" rel="stylesheet" />
     <link href="/css/queries.css" rel="stylesheet" />
+    <link href="/css/style-cta.css" rel="stylesheet" />
     <title>MoreMoreMe</title>
   </head>
   <body>
@@ -20,19 +21,19 @@
     <!-- HEADER -->
 
     <header class="main-header">
-      <div class="logo-box logo-box--index">
+      <a class="logo-box logo-box--index" href="index.html">
         M
         <div id="logo-a">ore</div>
         M
         <div id="logo-b">ore</div>
         M
         <div id="logo-c">e</div>
-      </div>
+      </a>
       <div class="button-area">
-          <a class="main-header-buttons" href=# ><strong>LOGIN</strong></a>
-          <a class="main-header-buttons" id="sign-up-button" href=# >
+          <button class="main-header-buttons" id="login-button"><strong>LOGIN</strong></button>
+          <button class="main-header-buttons" id="sign-up-button">
             <strong>SIGN UP</strong>
-          </a>
+          </button>
         <a  class="about-button" href=about.html>...about</a>
       </div>
     </header>
@@ -40,6 +41,94 @@
     <!-- HERO -->
 
     <main class="index-main">
+      <div class="cta-closed">
+        <form class="sign-up-form" action="#">
+          <div class="form-section">
+            <label for="full-name">Alias</label>
+            <input
+              id="full-name"
+              type="text"
+              placeholder="myalias"
+              required
+            />
+          </div>
+          <div class="form-section">
+            <label for="email">Email address</label>
+            <input id="email" type="email" placeholder="my@email.com" required />
+          </div>
+    
+          <!-- <div class="form-section">
+            <div>Goals</div>
+            <div class="form-goals-grid">
+              <div>Network</div>
+              <div>Health</div>
+              <div>Creativity</div>
+              <div>Money</div>
+              <div>Languages</div>
+              <div>Music</div>
+              <div>Free time</div>
+              <div>Exercice</div>
+              <div>Learning</div>
+              <div class="new-goal-cell">Add new</div>
+            </div>
+          </div> -->
+          <!-- <div class="form-section">
+            <label for="new-goal">Add new goal</label>
+            <input id="new-goal" type="string" placeholder="Goal" />
+          </div> -->
+          <button class="form-button">Log in</button>
+        </form>
+        <div class="alert-container">
+          <div class="form-alert">Not yet a memeber?</div>
+          <button class="form-button form-signup-btn">Sign up</button>
+        </div>
+      </div>
+      <div class="cta-closed-b">
+        <form class="sign-up-form-b" action="#">
+          <div>
+            <div class="form-section">
+              <label for="full-name">Alias</label>
+              <input
+              id="full-name"
+              type="text"
+              placeholder="myalias"
+              required
+              />
+            </div>
+            <div class="form-section">
+              <label for="email">Email address</label>
+              <input id="email" type="email" placeholder="my@email.com" required />
+            </div>
+            <div class="form-section">
+              <label for="password">Password</label>
+              <input id="password" type="email" placeholder="************" required />
+            </div>
+          </div>
+          <div class="form-section">
+            <div>Goals</div>
+            <div class="form-goals-grid">
+              <div>Network</div>
+              <div>Health</div>
+              <div>Creativity</div>
+              <div>Money</div>
+              <div>Languages</div>
+              <div>Music</div>
+              <div>Free time</div>
+              <div>Exercice</div>
+              <div>Learning</div>
+              <div class="new-goal-cell">Add new</div>
+            </div>
+          </div>
+          <div>
+
+          <div class="form-section">
+            <label for="new-goal">Add new goal</label>
+            <input id="new-goal" type="string" placeholder="Goal" />
+          </div>
+          <div class="form-section">Goals total: </div>
+        </div>
+        </form>
+      </div>
       <div class="hero">
         <img src="img/dataPic5.png" class="graphics-pic"></img>
         <div class="hero-right-box">
@@ -216,7 +305,7 @@
             </li>
           </ul>
           <div class="copyright-text">
-            <p>Copyright &copy 2022</p>
+            <p>Copyright &copy <span class="year"></span></p>
             <p>All rights reserved</p>
             
           </div>
@@ -249,6 +338,7 @@
       </div>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script defer src="js/script.js"></script>
   </body>
 </html>

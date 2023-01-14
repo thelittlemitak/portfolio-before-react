@@ -44,6 +44,10 @@
   cursor: default;
 }
 
+.logo-box--index:hover {
+  cursor: pointer;
+}
+
 #logo-a {
   font-size: 2.6rem;
 }
@@ -62,8 +66,7 @@
 }
 
 
-.main-header-buttons:link,
-.main-header-buttons:visited {
+.main-header-buttons {
   text-align: center;
   display: inline-block;
 
@@ -78,19 +81,16 @@
   box-shadow: 1rem 1rem;
 }
 
-.main-header-buttons:hover,
-.main-header-buttons:active {
+.main-header-buttons:hover {
   background-color: #22ec98;
   transition: 0.3s;
 }
 
-#sign-up-button:link,
-#sign-up-button:visited {
+#sign-up-button {
   background-color: #f47dae;
 }
 
-#sign-up-button:hover,
-#sign-up-button:active {
+#sign-up-button:hover {
   background-color: #22ec98;
 }
 
