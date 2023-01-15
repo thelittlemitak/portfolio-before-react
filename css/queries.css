@@ -296,3 +296,29 @@ FONT SIZE IN PERCENTAGES (ALWAYS CHANGE IT!)
 REM INSIDE
 EM (16) FOR THE MEDIA MAX WIDTH
  */
+
+ /* ! SAFARI GAP FIX */
+
+ .no-flexbox-gap .hero-below-table-title div:not(:last-child) {
+  margin-right: 2rem;
+ }
+
+ .no-flexbox-gap .how-to-lists-section-container div:not(:last-child) {
+  margin-right: 3rem;
+ }
+
+ .no-flexbox-gap .how-to-lists-container div:not(:last-child) {
+  margin-bottom: 2rem;
+ }
+
+ .no-flexbox-gap .list-lines-container div svg:not(:last-child) {
+  margin-right: 2.5rem;
+ }
+
+ .no-flexbox-gap .how-to-lists-container h4 {
+  margin-bottom: 2rem;
+ }
+
+ .no-flexbox-gap .carousel-dots-container div:not(:last-child) {
+  margin-right: 0.5rem;
+ }
