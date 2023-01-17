@@ -2,6 +2,7 @@
 @media (max-width: 82em) {
   .hero-right-box {  
     font-size: 4.2rem;
+
     line-height: 6rem;
     padding: 2rem 0rem 2rem 3rem;
   }
@@ -46,8 +47,9 @@
 
   .testimonial-text {
     font-size: 3.6rem;
-    margin-right: 0rem;
+    
     line-height: 5rem;
+    margin-right: 0rem;
   }
 
   main {
@@ -57,38 +59,37 @@
 
 /* 900 */
 @media (max-width: 57em) {
-  /* html {
-    font-size: 42.5%;
-  } */
 
   .main-header {
     grid-template-columns: 1fr 1.5fr;
   }
 
   .hero {
-    display: block;
     margin-top: 0rem;
+    
+    display: block;
   }
 
   .graphics-pic {
-    display: block;
-    translate: 0rem 2rem;
-    margin: 0rem auto 2rem auto;
     max-width: 60%;
+    
+    translate: 0rem 2rem;
+    
+    margin: 0rem auto 2rem auto;
+    
+    display: block;
   }
 
   .hero-right-box {
     max-width: 90%;
 
-    text-align: center;
-  
     font-size: 4.2rem;
     line-height: 6rem;
-  
-    background-color: #b3f8dc;
-  
-    padding: 2rem 3rem 2rem 3rem;
 
+    background-color: #b3f8dc;
+    
+    text-align: center;
+    padding: 2rem 3rem 2rem 3rem;
     margin: 0rem auto;
   }
 
@@ -102,6 +103,7 @@
 
   .hero-below-table-title {
     font-size: 5.2rem;
+
     margin-bottom: 1rem;
   }
 
@@ -115,11 +117,15 @@
 
   .hero2::after {
     right: -3%;
-    font-size: 3.5rem;
     transform: rotate(12deg);
+
+    font-size: 3.5rem;
+    
     background-color:rgb(247, 247, 89);
-    border: 0.3rem solid;
+    
     padding: 0rem 1rem;
+    
+    border: 0.3rem solid;
   }
 
   .how-to-lists-section-container {
@@ -131,16 +137,15 @@
     width: 70%;
     
     padding: 2rem 0rem 2rem 0rem;
-    
     margin: 3rem auto;
+    margin-top: 1rem;
 
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     align-items: center;
-    transition: all 0.3s;
+    gap: 2rem;
 
-    margin-top: 1rem;
+    transition: all 0.3s;
   }
 
   .carousel-container {
@@ -153,8 +158,8 @@
 
   .post-hero-title {
     height: 70px;
-    margin-bottom: 2rem;
 
+    margin-bottom: 2rem;
   }
 
   .image-container {
@@ -164,27 +169,27 @@
 
   .carousel-container {
     height: 100%;
+   
     margin: 0rem auto;
-    padding: 0rem 0rem 3rem 0rem;
-    display: block;
     margin-bottom: 4rem;
+    padding: 0rem 0rem 3rem 0rem;
+   
+    display: block;
   }
 
   .testimonial-img {
-    display: block;
-    margin: 2rem auto;
     height: 200px;
+    
+    margin: 2rem auto;
+    
+    display: block;
   }
 
   .testimonial-text {
-    text-align: center;
     font-size: 3rem;
+    
+    text-align: center;
     margin: 0rem 3rem 2rem 3rem;
-
-    /* font-weight: 500;
-    margin-bottom: 2rem;
-    margin-right: 3rem;
-    line-height: 5rem; */
   }
 
   .testimonial-name {
@@ -208,12 +213,14 @@
   }
 
   footer {
-    padding-top: 4rem;
     font-size: 2rem;
+    
+    padding-top: 4rem;
   }
 
   .footer-title {
     font-size: 3.2rem;
+    
     margin-bottom: 2rem;
   }
 
@@ -223,20 +230,18 @@
 
   .carousel-dots-container {
     margin-bottom: 4rem;
-
   }
 }
 
 /* 750 */
 @media (max-width: 47em) {
-  /* 52.5 before */
    html {
     font-size: 47.5%;
   }
 
   .hero2::after {
-    right: 0%;
     top: -5%;
+    right: 0%;
   }
 
   main {
@@ -252,8 +257,9 @@
   }
 
   footer {
-    padding-top: 3rem;
     font-size: 2rem;
+    
+    padding-top: 3rem;
   }
 
   .footer-title {
@@ -268,8 +274,8 @@
   }
 
   .hero2::after {
-    right: 0%;
     top: -7%;
+    right: 0%;
   }
 }
 
@@ -281,13 +287,14 @@
 
   .image-container {
     display: block;
-
   }
 
   .activities-imgs {
-    display: block;
-    margin: 0px auto;
     max-width: 50%;
+    
+    margin: 0px auto;
+    
+    display: block;
   }
 }
 

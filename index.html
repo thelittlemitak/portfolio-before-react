@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="A to-do list with social network capabilities like a forum for each goal to share knowledge and experiences"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="icon" href="img/mini-favicon.png"/>
     <link rel="apple-touch-icon" href="img/mini-favicon-apple.png"/>
     <link rel="manifest" href="manifest.webmanifest"/>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" />
+    
+    <link href="/css/queries.css" rel="stylesheet" />
+    
     <link href="/css/style-elements.css" rel="stylesheet" />
     <link href="/css/style-index.css" rel="stylesheet" />
-    <link href="/css/queries.css" rel="stylesheet" />
     <link href="/css/style-form.css" rel="stylesheet" />
+    
     <title>MoreMoreMe &mdash; Time to improve!</title>
+  
   </head>
   <body>
 
@@ -26,18 +29,13 @@
 
     <header class="main-header sticky">
       <a class="logo-box logo-box--index" href="index.html">
-        M
-        <div id="logo-a">ore</div>
-        M
-        <div id="logo-b">ore</div>
-        M
-        <div id="logo-c">e</div>
+        M<div id="logo-a">ore</div>
+        M<div id="logo-b">ore</div>
+        M<div id="logo-c">e</div>
       </a>
       <div class="button-area">
           <button class="main-header-buttons" id="login-button"><strong>LOGIN</strong></button>
-          <button class="main-header-buttons" id="sign-up-button">
-            <strong>SIGN UP</strong>
-          </button>
+          <button class="main-header-buttons" id="sign-up-button"><strong>SIGN UP</strong></button>
         <a  class="about-button" href=about.html>...about</a>
       </div>
     </header>
@@ -104,26 +102,6 @@
           <label for="email">Email address</label>
           <input id="email" type="email" placeholder="my@email.com" required />
         </div>
-  
-        <!-- <div class="form-section">
-          <div>Goals</div>
-          <div class="form-goals-grid">
-            <div>Network</div>
-            <div>Health</div>
-            <div>Creativity</div>
-            <div>Money</div>
-            <div>Languages</div>
-            <div>Music</div>
-            <div>Free time</div>
-            <div>Exercice</div>
-            <div>Learning</div>
-            <div class="new-goal-cell">Add new</div>
-          </div>
-        </div> -->
-        <!-- <div class="form-section">
-          <label for="new-goal">Add new goal</label>
-          <input id="new-goal" type="string" placeholder="Goal" />
-        </div> -->
         <button class="form-button">Log in</button>
       </form>
       <div class="alert-container">
@@ -132,18 +110,19 @@
       </div>
     </div>
 
-    <!-- HERO -->
+    <!-- MAIN START -->
+
     <main class="index-main">
+
+    <!-- HERO -->
+
       <div class="hero">
-        <img src="img/dataPic5.png" class="graphics-pic" alt="different business with dummy graphics and statistics"></img>
+        <img src="img/graphics.webp" class="graphics-pic" alt="different business with dummy graphics and statistics"></img>
         <div class="hero-right-box">
-          <p>
-            We are both a <strong>community</strong> of game-changers and an easy
-            <strong>planning tool</strong>.
-          </p>
+          <p>We are both a <strong>community</strong> of game-changers and an easy <strong>planning tool</strong>.</p>
         </div>
       </div>
-      <div class="hero2">
+      <div class="hero-below-section">
         <div class="hero-below-table">
           <div class="hero-below-table-title" ;">
             <div class="square"></div><div class="square"></div><div class="square"></div>
@@ -185,8 +164,8 @@
           <p class="table-item table-item-b"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
           </svg>
-          
-          LEARNING</p>        </div>
+          LEARNING</p>
+        </div>
       </div>
 
       <!-- IMAGES -->
@@ -201,9 +180,7 @@
       <!-- POST HERO -->
 
       <section class="post-hero-title-container">
-        <p class="post-hero-title">
-          Plan your path <strong>easily</strong> from one place
-        </p>
+        <p class="post-hero-title">Plan your path <strong>easily</strong> from one place</p>
       </section>
       <div class="arrow">&darr;</div>
 
@@ -278,16 +255,19 @@
         <div class="carousel-dot">&nbsp;</div>
         <div class="carousel-dot">&nbsp;</div>
       </div>
+
+      <!-- READY BUTTON -->
+
       <div class="ready-button-container">
         <button class="ready-button"><strong>I AM READY!</strong></button>
       </div>
+    
+      <!-- MAIN END -->
+
     </main>
 
       <!-- FOOTER -->
 
-    <!-- <footer>
-      <strong>Copyright</strong> &copy 2022 by MoreMoreMe
-    </footer> -->
     <footer class="footer-test">
       <div class="footer-test-container">
         <div>
@@ -312,7 +292,6 @@
           <div class="copyright-text">
             <p>Copyright &copy <span class="year"></span></p>
             <p>All rights reserved</p>
-            
           </div>
         </div>
         <nav>
@@ -326,24 +305,22 @@
         <div>
           <p class="footer-title">Contact</p>
           <address>
-            <p>
-              Kreutzigerstr. 10
-            </p>
-            <p>
-              10247 Berlin, Germany
-            </p>
-            <p>
-              <a href="tel:+34654177940">+34654177940</a>
-            </p>
-            <p>
-              <a href="mailto:rieraturjose@gmail.com">rieraturjose@gmail.com</a>
-            </p>
+            <p>Kreutzigerstr. 10</p>
+            <p>10247 Berlin, Germany</p>
+            <p><a href="tel:+34654177940">+34654177940</a></p>
+            <p><a href="mailto:rieraturjose@gmail.com">rieraturjose@gmail.com</a></p>
           </address>
         </div>
       </div>
     </footer>
+
+    <!-- SCRIPTS -->
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script defer src="js/script.js"></script>
+
   </body>
+  
 </html>

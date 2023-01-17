@@ -1,5 +1,3 @@
-console.log("k paza");
-
 // ! HAVE THE CORRECT YEAR ON THE FOOTER
 
 const yearEl = document.querySelector(".year");
