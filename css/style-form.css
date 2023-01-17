@@ -1,4 +1,4 @@
-.cta-closed {
+.login-form-cont {
   top: -1%;
   display: flex;
   justify-content: center;
@@ -12,7 +12,7 @@
   transition: all 0.3s ease-in;
 }
 
-.cta-closed-b {
+.signup-form-cont {
   top: -1%;
   display: flex;
   justify-content: center;
@@ -32,6 +32,22 @@
   pointer-events: auto;
   visibility: visible;
   transform: translateX(0);
+  /* background-color: #212529; */
+  width: 100%;
+  padding-bottom: 10rem;
+  position: fixed;
+  margin-top: 20rem;
+}
+
+.cta-open-below {
+  transition: all 0.3s ease-in;
+  margin-top: 0rem;
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(0);
+  transform: translatey(370%);
+
   /* background-color: #212529; */
   width: 100%;
   padding-bottom: 10rem;

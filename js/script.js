@@ -14,7 +14,7 @@ function checkFlexGap() {
   flex.style.flexDirection = "column";
   flex.style.rowGap = "1px";
 
-  console.log(flex)
+  console.log(flex);
 
   flex.appendChild(document.createElement("div"));
   flex.appendChild(document.createElement("div"));
@@ -30,42 +30,52 @@ checkFlexGap();
 
 // ! CTA APPAREANCE
 
-const cta = document.querySelector(".cta-closed");
-const ctaB = document.querySelector(".cta-closed-b");
+const cta = document.querySelector(".login-form-cont");
+const ctaB = document.querySelector(".signup-form-cont");
+
 const loginBtn = document.querySelector("#login-button");
 const signUpBtn = document.querySelector("#sign-up-button");
-const hero = document.querySelector(".hero");
-const hero2 = document.querySelector(".hero2");
-const body = document.querySelector('body');
-const btnArea = document.querySelector('.button-area');
+const readyBtn = document.querySelector(".ready-button");
+
+const body = document.querySelector("body");
+const btnArea = document.querySelector(".button-area");
+
+const mainEL = document.querySelector("main")
+const footer = document.querySelector(".footer-test");
 
 
-loginBtn.addEventListener('click', function () {
-  cta.classList.toggle('cta-open');
-  hero.classList.toggle('hide');
-  hero2.classList.toggle('hide');
-  loginBtn.classList.toggle('hide');
-  signUpBtn.classList.toggle('hide');
-  body.classList.toggle('hide-overflow-y')
-  btnArea.classList.toggle('hide');
-})
 
-signUpBtn.addEventListener('click', function () {
-  ctaB.classList.toggle('cta-open');
-  hero.classList.toggle('hide');
-  hero2.classList.toggle('hide');
-  loginBtn.classList.toggle('hide');
-  signUpBtn.classList.toggle('hide');
-  body.classList.toggle('hide-overflow-y')
-  btnArea.classList.toggle('hide');
-})
+loginBtn.addEventListener("click", function () {
+  cta.classList.toggle("cta-open");
+  mainEL.classList.toggle("hide")
+  body.classList.toggle("hide-overflow-y");
+  btnArea.classList.toggle("hide");
+  footer.classList.toggle("hide")
+});
+
+signUpBtn.addEventListener("click", function () {
+  ctaB.classList.toggle("cta-open");
+  mainEL.classList.toggle("hide")
+  body.classList.toggle("hide-overflow-y");
+  btnArea.classList.toggle("hide");
+  footer.classList.toggle("hide")
+
+});
+
+readyBtn.addEventListener("click", function () {
+  loginBtn.classList.toggle("hide");
+  ctaB.classList.toggle("cta-open");
+  mainEL.classList.toggle("hide")
+  body.classList.toggle("hide-overflow-y");
+  btnArea.classList.toggle("hide");
+  footer.classList.toggle("hide")
+
+});
 
 // ! SMOOTH SCROLLING SAFARI FIX
 
-const contactBtn = document.querySelector('#contact-button');
-const footer = document.querySelector('.footer-test');
+const contactBtn = document.querySelector("#contact-button");
 
-
-contactBtn.addEventListener('click', function () {
-  footer.scrollIntoView({behavior: "smooth"})
-})
+contactBtn.addEventListener("click", function () {
+  footer.scrollIntoView({ behavior: "smooth" });
+});

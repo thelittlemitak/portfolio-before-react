@@ -1,28 +1,28 @@
 <!--
+& todo
+  & finish HTML CSS course
+    & img compression
+  & do lighthouse tests until this flows
+  & check html elements
+  & - Check if you can use pseudo classes or descendent selectors with elements to spare some classes (specially for imgs and icons). Also reusable classes.
+  & black color from hero left is not stable in the index the little circle and the edificios
+  & about hero left img compression, size and hole on the sock
+  & fix safari hero on index
+  & smallest width from hero2 title wraps too
+  & check 87/95 (and other design references) for new ideas
+  & adding width and height to imgs 
+& todo
+
 * IDEAS
 * It would be nice to compare others people's plans to improve yours
 * A tool to know what emails are where
 * Animations for the obstacle thingy?
 
-the hover trick
+the hover that moves something else trick
 https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered
-
-* TO-DO
-* Check HTML elements
-* - Check if you can use pseudo classes or descendent selectors with elements to spare some classes (specially for imgs and icons)
-* - also re usable classes (also for margins and paddings; check what repetas on CSS and fill the HTML with those classes)
-* black color from hero left is not stable in the index the little circle and the edificios
-* remove size from picture of about and edit the hole on the sock
-* when you click a button the shadow dissapears
-* img size optiomization
-* safari still presents an issue in the hero
-* smallest width from hero2 title wraps too
-
-* change the a from the cta to button since the index does not change
 
 * GOOD PRACTICES
 * just do GRIDs for the next time...
-
 
 ! che
 ? che
@@ -32,9 +32,6 @@ https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-on
 ~ che
 todo che
 Grey (//)
-
-
-https://developer.mozilla.org/es/
 
 diffchecker.com (checks difference between two texts)
 
@@ -104,8 +101,6 @@ Check contrast at coolors. 4.5:1 normal and 3:1 large
 https://unsplash.com/es
 https://uifaces.co
 
-todo IMAGES HAVE TO BE DOUBLE THE SIZE USED!!!!!!
-
 SQUOOSH TO REDUCE SIZE (MB)
 
 74 ICONS FROM SAME ICON PACKS
@@ -115,94 +110,60 @@ https://ionic.io/ionicons
 76 SHADOWS
 box-shadow: horizontalOffSet verticalOffSet blur(also in PX) scale(also in PX) color
 
-78/79 BORDER-RADIUS
-todo VERY NICE IDEA AT THE END OF 78
-
+78/79 BORDER-RADIUS (inspiration found here and on all web design section)
 80 WHITE SPACE
-SCALE
-2 4 8 12 16 24 32 48 64 80 96 128
-
 81 VISUAL HIERARCHY
 85 SOURCE OF INSPIRATION
-
 87 ELEMENTS AND COMPONENTS
-todo GOOD TO KNOW ALL THE AVAILABLE OPTIONS TO EVENTUALLY HAVE NEW IDEAS AND ADD THEM
-
-todo 91 min12 the centering trick!
-todo this is important to move things inside a container
-
-EMPTY SPACE IN HTML IS &nbsp;
-
+91:
+* min12 the centering trick!
+* EMPTY SPACE IN HTML IS &nbsp;
 94 PAGINATION COMPONENT
-
 95 SECTION COMPONENTS
-todo GOOD TO KNOW ALL THE AVAILABLE OPTIONS TO EVENTUALLY HAVE NEW IDEAS AND ADD THEM
-
 96-97 HERO COMPONENT
-todo (CHECK LATER FOR MEDIA REQUESTS)
-background-image: linear-gradient(), url();
-background-size: cover;
-
-background-image: linear-gradient(to red, blue);
-
-? 100vh = viewport hight
-
-98-99 auto and % and vh tricks are key!!!!!
-
+* background-image: linear-gradient(), url();
+* background-size: cover;
+* background-image: linear-gradient(to red, blue);
+* 100vh = viewport hight
+98-99 auto and % and vh tricks
 overflow: scroll; has nothing to do with flexbox
 flex-shrink: 0;
-
 101 website planification
 102 example of the above for step 1 and 2
 103 step 3
 104 step 4
-
 105 responsive design principles (% & max-width & rem)
 106 max width -> when the v touches the width, the element starts to adapt to the parent (v) width. If not, it stays the same (that's why is different from %)
 rem explanation and accessibiity. Super important!!!
-
 108 when doing a double reference to a class use -- like btn btn--action btn --reference
-108 min 19:30 trick to add borders inside so the layout doesn't move when the border appears (box-shadow: (inset??) 0 0 0 3px #000)
+108 min 19:30 trick to add borders inside so the layout doesn't move when the border appears
+* (box-shadow: (inset??) 0 0 0 3px #000)
 108 in 23:00 transitions explained
 108 using classes for re-usable margins, so they stay outside of the 'core' class. Always add !important si adding the class always works.
-* 108 ALWAYS ADD WIDTH!!! Some browsers need both
+108 ALWAYS ADD WIDTH!!! Some browsers need both
 109 min 16 overlapping
 111 navegation
 111 min 11 double class (it means it needs both; is like creating another one then) .class1.class2
-112 re-usable grid 
+112 re-usable grid
 * 112 it also contains very good tricks and practices
-* 114 at the end. More pseudo elements examples (you can only use before or after once)
+114 at the end. More pseudo elements examples (you can only use before or after once)
 * 114 min 24 padding-bottom trick
 115 min13 filter atribute for imgs and opacity to go from black to grey
 116 min18 how to install ionicons
-* 117 min 1 paint an icon with fill or stroke or color (in that case all the text atributes work)
-* 117 overflow for images inside containers min12
+117 min 1 paint an icon with fill or stroke or color (in that case all the text atributes work)
+117 overflow for images inside containers min12
 124 background images need new atr on the html so the picture is still 'described' those are role="img" and aria-label(as "alt", the one used on images)
-125 min16 dropdown manu (select+option html element)
-
+125 min16 dropdown menu (select+option html element)
 130 USING DEVICE TOOLBAR IN INSPECTOR
-
 135 building menu botton for mobile navegation
 * lots of info here (use of vh, OPACITY vs DISPLAY:NONE, use classes for changes, OVERFLOW-X things comming in from the side,
 * transition curves)
-
 XXX MEDIA QUERIES
 nice source of info about media queries
 https://zellwk.com/blog/media-query-units/
 about em and rem
 https://zellwk.com/blog/rem-vs-em/
-
-*DO A CONTAINER (ELEMENT AS DIV, AND CLASS w/) AND PUT IT ALWAYS AS A PARENT ELEMENT OF WHATEVER YOU DO IS A GOOD IDEA
-.container {
-  /* 1140px */
-  max-width: 120rem;
-  padding: 0 3.2rem;
-  margin: 0 auto;
-}
-
-*DON'T USE FLEXBOX FOR EVERYTHING CAUSE WITH A GRID IT'S EASIER LATER TO MAKE IT RESPONSIVE
-
-THE REASON YOU DON'T USE DISPLAY TO APPEAR THINGIES IS BECAUSE THE TRANSITIONS DON'T WORK WITH THAT
+* THE REASON YOU DON'T USE DISPLAY TO APPEAR THINGIES IS BECAUSE THE TRANSITIONS DON'T WORK WITH THAT
 
 141 page anchor and scrolling
 142 sticky navigation (you can choose if you want to it appear later)
@@ -212,14 +173,17 @@ fix Safari flex gap
 144 lighthous on devtools to generate a report to see how the website works.
 145 adding favicon and meta description
 146 img optimization (check max size inside the website, calculate the double, resize it to the double, compress it)
+https://squoosh.app/
 
 
-IDEAS
+
+
+WEBSITE INSPIRATION
 https://www.thomann.de/es/index.html
 https://www.youtube.com/
 https://www.reddit.com/
 https://medium.com/
 https://theuselessweb.com/
 https://checkboxrace.com/
-
+http://labs.dinahmoe.com/plink/
 -->

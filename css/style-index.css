@@ -507,6 +507,5 @@
 
 .ready-button:hover {
   background-color:#f7a1c5;
-  transform: translateY(-1.5rem);
   cursor: pointer;
 }
