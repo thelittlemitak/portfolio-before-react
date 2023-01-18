@@ -35,39 +35,43 @@ const loginBtn = document.querySelector("#login-button");
 const signUpBtn = document.querySelector("#sign-up-button");
 const readyBtn = document.querySelector(".ready-button");
 
-const body = document.querySelector("body");
 const btnArea = document.querySelector(".button-area");
-
+const body = document.querySelector("body");
 const mainEL = document.querySelector("main")
 const footer = document.querySelector(".footer-test");
 
 
 
+
 loginBtn.addEventListener("click", function () {
-  cta.classList.toggle("cta-open");
-  mainEL.classList.toggle("hide")
-  body.classList.toggle("hide-overflow-y");
+  cta.classList.toggle("form-open");
+  
   btnArea.classList.toggle("hide");
+  mainEL.classList.toggle("hide")
   footer.classList.toggle("hide")
+  
+  body.classList.toggle("hide-overflow-y");
 });
 
 signUpBtn.addEventListener("click", function () {
-  ctaB.classList.toggle("cta-open");
-  mainEL.classList.toggle("hide")
-  body.classList.toggle("hide-overflow-y");
+  ctaB.classList.toggle("form-open");
+  
   btnArea.classList.toggle("hide");
+  mainEL.classList.toggle("hide")
   footer.classList.toggle("hide")
+  
+  body.classList.toggle("hide-overflow-y");
 
 });
 
 readyBtn.addEventListener("click", function () {
-  loginBtn.classList.toggle("hide");
-  ctaB.classList.toggle("cta-open");
-  mainEL.classList.toggle("hide")
-  body.classList.toggle("hide-overflow-y");
+  ctaB.classList.toggle("form-open");
+  
   btnArea.classList.toggle("hide");
+  mainEL.classList.toggle("hide")
   footer.classList.toggle("hide")
-
+  
+  body.classList.toggle("hide-overflow-y");
 });
 
 // ! SMOOTH SCROLLING SAFARI FIX
