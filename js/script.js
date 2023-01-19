@@ -4,7 +4,7 @@ const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
-// ! FIX THE OLD-SAFARI GAP ISSUE
+// ! CLASS FOR THE OLD-SAFARI FLEX GAP ISSUE
 
 function checkFlexGap() {
   var flex = document.createElement("div");
@@ -26,10 +26,10 @@ function checkFlexGap() {
 }
 checkFlexGap();
 
-// ! CTA APPAREANCE
+// ! FORMS APPAREANCE
 
-const cta = document.querySelector(".login-form-cont");
-const ctaB = document.querySelector(".signup-form-cont");
+const loginForm = document.querySelector(".login-form-cont");
+const signupForm = document.querySelector(".signup-form-cont");
 
 const loginBtn = document.querySelector("#login-button");
 const signUpBtn = document.querySelector("#sign-up-button");
@@ -40,11 +40,8 @@ const body = document.querySelector("body");
 const mainEL = document.querySelector("main")
 const footer = document.querySelector(".footer-test");
 
-
-
-
 loginBtn.addEventListener("click", function () {
-  cta.classList.toggle("form-open");
+  loginForm.classList.toggle("form-open");
   
   btnArea.classList.toggle("hide");
   mainEL.classList.toggle("hide")
@@ -54,7 +51,7 @@ loginBtn.addEventListener("click", function () {
 });
 
 signUpBtn.addEventListener("click", function () {
-  ctaB.classList.toggle("form-open");
+  signupForm.classList.toggle("form-open");
   
   btnArea.classList.toggle("hide");
   mainEL.classList.toggle("hide")
@@ -65,7 +62,7 @@ signUpBtn.addEventListener("click", function () {
 });
 
 readyBtn.addEventListener("click", function () {
-  ctaB.classList.toggle("form-open");
+  signupForm.classList.toggle("form-open");
   
   btnArea.classList.toggle("hide");
   mainEL.classList.toggle("hide")

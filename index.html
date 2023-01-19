@@ -54,12 +54,12 @@
             />
           </div>
           <div class="form-section">
-            <label for="email">Email address</label>
-            <input id="email" type="email" placeholder="my@email.com" required />
+            <label for="signup-email">Email address</label>
+            <input id="signup-email" type="email" placeholder="my@email.com" required />
           </div>
           <div class="form-section">
-            <label for="password">Password</label>
-            <input id="password" type="email" placeholder="************" required />
+            <label for="signup-password">Password</label>
+            <input id="signup-password" type="email" placeholder="************" required />
           </div>
         </div>
         <div class="form-section">
@@ -90,12 +90,12 @@
     <div class="login-form-cont">
       <form class="login-form" action="#">
         <div class="form-section">
-          <label for="email">Email address</label>
-          <input id="email" type="email" placeholder="my@email.com" required />
+          <label for="login-email">Email address</label>
+          <input id="login-email" type="email" placeholder="my@email.com" required />
         </div>
         <div class="form-section">
-          <label for="password">Password</label>
-          <input id="password" type="email" placeholder="************" required />
+          <label for="login-password">Password</label>
+          <input id="login-password" type="email" placeholder="************" required />
         </div>
         <button class="form-button">Log in</button>
       </form>
@@ -112,7 +112,13 @@
     <!-- HERO -->
 
       <div class="hero">
-        <img src="img/graphics.webp" class="graphics-pic" alt="different business with dummy graphics and statistics"></img>
+        <div>
+          <picture>
+            <source srcset="img/graphics.webp" type="image/webp">
+            <source srcset="img/backup-pngs/dataPic5-temp-nocompress-correctsize.png" type="image/png">
+            <img src="img/backup-pngs/dataPic5-temp-nocompress-correctsize.png"class="graphics-pic" alt="different business with dummy graphics and statistics"></img>
+          </picture>
+        </div>
         <div class="hero-right-box">
           <p>We are both a <strong>community</strong> of game-changers and an easy <strong>planning tool</strong>.</p>
         </div>
@@ -165,10 +171,22 @@
 
       <!-- IMAGES -->
 
-      <div class="image-container">
-        <img src="img/test1.webp" class="activities-imgs" alt="two hands typing a macbook laptop on a table">
-        <img src="img/test2.webp" class="activities-imgs" alt="woman doing abs with red trousers on a thin mat">
-        <img src="img/test3.webp" class="activities-imgs" alt="two hands playing electric guitar">
+      <div class="images-section-container">
+        <picture>
+          <source srcset="img/test1.webp" type="image/webp">
+          <source srcset="img/backup-pngs/test1.png" type="image/png">
+          <img src="img/backup-pngs/test1.png" class="activities-imgs" alt="two hands typing a macbook laptop on a table">
+        </picture>
+        <picture>
+          <source srcset="img/test2.webp" type="image/webp">
+          <source srcset="img/backup-pngs/test2.png" type="image/png">
+          <img src="img/backup-pngs/test2.png" class="activities-imgs" alt="woman doing abs with red trousers on a thin mat">
+        </picture>
+        <picture>
+          <source srcset="img/test3.webp" type="image/webp">
+          <source srcset="img/backup-pngs/test3.png" type="image/png">
+          <img src="img/backup-pngs/test3.png" class="activities-imgs" alt="two hands playing electric guitar">
+        </picture>
       </div>
 
 
@@ -227,18 +245,22 @@
       <!-- CAROUSEL -->
 
       <div class="carousel-container">
-        <img src="img/testimonial1.webp" alt="woman smiling without background" class="testimonial-img">
+        <picture>
+          <source srcset="img/testimonial1.webp" type="image/webp">
+          <source srcset="img/backup-pngs/testimonial1.png" type="image/png">
+          <img src="img/backup-pngs/testimonial1.png" alt="woman smiling without background" class="testimonial-img">
+        </picture>
         <blockquote class="testimonial-box">
           <p class="testimonial-text">"Being able to plan my daily activities together with other people it's an amazing way to keep myself motivated."</p>
           <p class="testimonial-name">Mariana Chupapi</p>
           <p class="testimonial-description">SEO of Nintendo</p>
         </blockquote>
-        <button class="carousel-button carousel-button-left">
+        <button class="carousel-button carousel-button-left" aria-label="previous testimonal">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
           </svg>
         </button>
-        <button class="carousel-button carousel-button-right">
+        <button class="carousel-button carousel-button-right" aria-label="next testimonal">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
           </svg>

@@ -15,7 +15,7 @@
     margin-bottom: 0rem;
   }
 
-  .image-container {
+  .images-section-container {
     margin-bottom: 3rem;
   }
 }
@@ -65,7 +65,7 @@
   }
 
   .hero {
-    margin-top: 0rem;
+    margin-top: 12rem;
     
     display: block;
   }
@@ -111,22 +111,11 @@
     height: 3rem;
   }
 
-  .hero2 {
-    height: 28rem;
-  }
-
-  .hero2::after {
+  .hero-below-section::after {
     right: -3%;
-    transform: rotate(12deg);
 
     font-size: 3.5rem;
-    
-    background-color:rgb(247, 247, 89);
-    
-    padding: 0rem 1rem;
-    
-    border: 0.3rem solid;
-  }
+    }
 
   .how-to-lists-section-container {
     display: block;
@@ -136,16 +125,9 @@
   .how-to-lists-container {
     width: 70%;
     
-    padding: 2rem 0rem 2rem 0rem;
+    padding: 2rem 0rem;
     margin: 3rem auto;
     margin-top: 1rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-
-    transition: all 0.3s;
   }
 
   .carousel-container {
@@ -162,7 +144,7 @@
     margin-bottom: 2rem;
   }
 
-  .image-container {
+  .images-section-container {
     margin-top: 5rem;
     margin-bottom: 2rem;
   }
@@ -239,7 +221,7 @@
     font-size: 47.5%;
   }
 
-  .hero2::after {
+  .hero-below-section::after {
     top: -5%;
     right: 0%;
   }
@@ -265,7 +247,10 @@
   .footer-title {
     font-size: 3rem;
   }
-}
+
+  .how-to-lists-container {
+    width: 80%;
+  }
 
 /* 600 */
 @media (max-width: 38em) {
@@ -273,9 +258,24 @@
     font-size: 45%;
   }
 
-  .hero2::after {
-    top: -7%;
+  .hero-below-section::after {
+    top: -4%;
     right: 0%;
+    transform: rotate(7deg);
+  }
+
+  .hero-below-table-title {
+    font-size: 4.8rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .table-item {
+    font-size: 2.2rem;
+  }
+
+  .post-hero-title {
+    font-size: 3.2rem;
   }
 }
 
@@ -285,17 +285,21 @@
     font-size: 42%;
   }
 
-  .image-container {
-    display: block;
+  .images-section-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    align-content: center;
   }
 
   .activities-imgs {
-    max-width: 50%;
-    
-    margin: 0px auto;
-    
     display: block;
-  }
+    max-width: 80%;
+    max-height: 100%;
+    margin: 0 auto;
+    }
 }
 
 /* 
@@ -306,26 +310,26 @@ EM (16) FOR THE MEDIA MAX WIDTH
 
  /* ! SAFARI GAP FIX */
 
- .no-flexbox-gap .hero-below-table-title div:not(:last-child) {
+.no-flexbox-gap .hero-below-table-title div:not(:last-child) {
   margin-right: 2rem;
- }
+}
 
- .no-flexbox-gap .how-to-lists-section-container div:not(:last-child) {
+.no-flexbox-gap .how-to-lists-section-container div:not(:last-child) {
   margin-right: 3rem;
- }
+}
 
- .no-flexbox-gap .how-to-lists-container div:not(:last-child) {
+.no-flexbox-gap .how-to-lists-container div:not(:last-child) {
   margin-bottom: 2rem;
- }
+}
 
- .no-flexbox-gap .list-lines-container div svg:not(:last-child) {
+.no-flexbox-gap .list-lines-container div svg:not(:last-child) {
   margin-right: 2.5rem;
- }
+}
 
- .no-flexbox-gap .how-to-lists-container h4 {
+.no-flexbox-gap .how-to-lists-container h4 {
   margin-bottom: 2rem;
- }
+}
 
- .no-flexbox-gap .carousel-dots-container div:not(:last-child) {
+.no-flexbox-gap .carousel-dots-container div:not(:last-child) {
   margin-right: 0.5rem;
- }
+}

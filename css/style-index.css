@@ -131,14 +131,18 @@
   margin-top: 19rem;
   margin-bottom: 9rem;
 
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }
 
 .graphics-pic {
-  max-width: 50%;
+  max-width: 67rem;
+  max-height: 36rem;
+  
   object-fit: contain;
-  translate: 0rem 2rem;
+  margin-top: 4rem;
+  translate: 2rem 1rem;
 }
 
 .hero-right-box {
@@ -150,8 +154,7 @@
   
   line-height: 7rem;
   padding: 2rem 0rem 2rem 5rem;
-  margin-left: 1rem;
-
+  margin-left: 1.1rem;
   border: 0.3rem solid;
   box-shadow: 0.7rem 0.7rem;
 
@@ -265,18 +268,23 @@
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&& IMAGES */
 
-.image-container {
+.images-section-container {
+  max-width: 100%;
+
   margin-top: 8rem;
   margin-bottom: 5rem;
 
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 2rem;
 }
 
 .activities-imgs {
-  max-width: 32%;
-  height: 90%;
+  max-width: 100%;
+  max-height: 100%;
   
+  object-fit: contain;
   border: 0.3rem solid;
   box-shadow: 0.7rem 0.7rem;
   
@@ -393,6 +401,7 @@
 }
 
 .testimonial-img {
+  max-width: 45rem;
   height: 45rem;
   
   margin: 1rem 4rem;
