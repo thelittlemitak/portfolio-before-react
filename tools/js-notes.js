@@ -167,4 +167,87 @@ joseObject[age]; //here you can put an expression
 //how to add new properties without methods
 joseObject.location = "Berlin";
 joseObject["Instagram"] = "totfosk";
- 
+//44. Object methods. Functions attached to objects. They are expressions and they always need a property (you cannot just put a function with a name)
+const newObject = {
+  birthYear: 1992,
+  calcAge4: function (birthYear) {
+    return 2023 - birthYear;
+  },
+  calcAge5: function () {
+    return 2023 - this.birthYear;
+  },
+  //you can put it in a var so you don't need to call the whole function afterwards. This is afterwards a new property that you created with this function
+  calcAge6: function () {
+    this.age = 2023 - this.birthYear;
+    return this.age;
+  },
+};
+//and in order to call it:
+console.log(newObject.calcAge4(1992));
+console.log(newObject["calcAge4"](1992));
+console.log(newObject.calcAge5());
+console.log(newObject.age);
+//'this' is just like putting newObject; but then if you change the object name you would have to do lots of changes (to all references)
+//CMND + D trick!!
+//46. For loops
+for (let rep = 0; rep <= 10; rep++) {
+  // counter; condition (loop runs while it's true);
+  console.log(`Lifting weights repetition ${rep}`);
+}
+//47. Filling arrays
+let types = [];
+for (let i = 0; i < joseObject.length; i++) {
+  types[i] = typeof joseObject[i];
+  types.push(typeof joseObject[i]);
+}
+console.log(types);
+//it seems that whatever happens inside the loop, it works on the outside; otherwise types would be empty
+const years = [1992, 1993, 1994, 1995];
+const ages = [];
+const ages2 = [];
+for (let i = 0; i < years.length; i++) {
+  //if you use CONTINUE, what's below will not be executed
+  if (typeof joseObject[i] !== "string") continue;
+  //if you use BREAK, the loop stops
+  if (typeof joseObject[i] !== "number") break;
+  ages[i] = 2023 - years[i];
+  ages2.push(2023 - years[i]);
+}
+console.log(ages);
+console.log(ages2);
+//48. Backwards loop
+for (let i = joseObject.length - 1; i >= 0; i--);
+//you can also put loops inside loops
+//49. The WHILE loop
+for (let rep = 0; rep <= 10; rep++) {
+  console.log("i am repeating myself");
+}
+//this is a copy of the above but with the new method
+let rep = 0;
+while (rep <= 10) {
+  console.log("i am repeating myself");
+  rep++;
+}
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log("you did a 6");
+}
+//the WHILE is used when we don't know how many times is gonna itinerate; the for loops is used when we know that
+//55. min11. You can use user SNIPPETS/SHORTCUTS
+//56. Installing Node.js and use it as a live server
+//58. 4 Steps to solve any PROBLEM: Understand, Divide, Research, Sketching
+//61. console.warn/error/table if you want different formatting on the console
+//BREAKPOINTS (so the code doesn't run until the end (easier to find bugs)): Sources on Dev Tools->js file->Set breakpoints. You can also use the debugger directly as
+debugger;
+//70. DOM Manipulation
+//most of the times you assign these to a var
+document.querySelector(".class");
+document.querySelector("#id");
+document.querySelector(".class").textContent; //to see what's inside
+document.querySelector(".class").textContent = "new text"; //to change what's inside
+document.querySelector(".class").value; //to get the inserted value from an input. I don't know how it works for other elements
+document.querySelector(".class").addEventListener("click", function() {
+  console.log("")
+}); //'listens to a click
