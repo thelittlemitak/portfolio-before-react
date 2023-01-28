@@ -215,6 +215,7 @@ for (let i = 0; i < years.length; i++) {
 }
 console.log(ages);
 console.log(ages2);
+//you can also remove the {} as with the if statment everytime that you only need one line (you just put what happens after the condition)
 //48. Backwards loop
 for (let i = joseObject.length - 1; i >= 0; i--);
 //you can also put loops inside loops
@@ -242,12 +243,59 @@ while (dice !== 6) {
 //BREAKPOINTS (so the code doesn't run until the end (easier to find bugs)): Sources on Dev Tools->js file->Set breakpoints. You can also use the debugger directly as
 debugger;
 //70. DOM Manipulation
-//most of the times you assign these to a var
+//most of the times you assign these to a var.
+// & THE DOT IS ONLY FOR THE SELECTOR!
 document.querySelector(".class");
 document.querySelector("#id");
 document.querySelector(".class").textContent; //to see what's inside
 document.querySelector(".class").textContent = "new text"; //to change what's inside
 document.querySelector(".class").value; //to get the inserted value from an input. I don't know how it works for other elements
-document.querySelector(".class").addEventListener("click", function() {
-  console.log("")
+document.querySelector(".class").addEventListener("click", function () {
+  console.log("");
 }); //'listens to a click
+document.querySelector("body").style.backgroundColor = "#ffffff"; //always the value is a string here
+document.getElementById("only-an-ID"); //here you don't need a . or #, but you need it using the querySelector
+//78. Refactoring (cleaning the code)
+//In order to avoid having all these (similar) lines from above, you can create a function. For example: instead of:
+document.querySelector(".class").textContent = "new text"; //everytime you want to do this to the same class, you can rather create this:
+const displayMessage = function (message) {
+  document.querySelector(".class").textContent = message;
+};
+//and then use it as
+displayMessage("new-text1");
+displayMessage("new-text2");
+displayMessage("new-text3");
+//Also, using vars for query selectors. So instead of having this:
+document.querySelector(".classAC");
+//you can have this
+const classAC = document.querySelector(".class");
+//if you want to add/remove classes to classAC:
+classAC.classList.add("hidden");
+classAC.classList.remove("hidden");
+classAC.classList.toggle("hidden");
+//very useful condition for if statements
+classAC.classList.contains("hidden");
+!classAC.classList.contains("hidden");
+//IMPORTANT! If you use QUERY SELECTOR only the first element that has this class will be selected, not the others. In that case you have to use
+document.querySelectorAll(".class-that-is-used-in-more-places");
+//then if you need to do a change in all you need a for loop since what's selected becomes an array of each element w that class (very annoying, but that's what it seems)
+//81. Hear key pressing
+document.addEventListener("keydown", function () {}); //there's also keypress and keyup; self-explanatory
+//EVENTS are not explained on the course so we jump to youtube: https://www.youtube.com/watch?v=YiOlaiscqDY&ab_channel=dcode
+//Events are actions potencially taken by the user (or by an API), like a click or a key press. HTML has them too as attributes but it's not recommended to use them.
+//When you pass a function like the above, the argument is always the EVENT object. Normally they are repressented with an arrow f
+document.addEventListener("keydown", (e) => {});
+//in order to make things move when a specific key is pressed, you need to beware the key property, so e.key. For example:
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    console.log("do this or that");
+  }
+});
+//82. min4. Flow chart (or everything that can happen). Is like a roadmap of all possibilities. http://diagrams.net
+//When a var from a querySelector has an El at the end means you are referring to an element so you can later differeneciate between 'normal' vars and references
+//How to change a HTML attribute:
+classAC.src = `dice-${dice}.png`;
+//so basically it's only dot . and the attribute you want to change and assign it a string
+//also the above serve as example of a DYNAMIC SELECTOR. That's using a template literal to fill numbers and change what's selected depending on a var. Another e.g.:
+document.getElementById(`current--${activePlayer}`).textContent = currentScore;
+//86. Using functions only to set values from vars, like a reset button
