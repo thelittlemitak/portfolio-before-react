@@ -365,3 +365,4 @@ document.createElement('div'); //rumors say that if you don't append this to the
 // * I will learn this as a support too: https://www.youtube.com/watch?v=y17RuWkWdn8&ab_channel=WebDevSimplified
 //to remove an element: first select it; put it on a var. Then:
 varY.remove();
+// * Parsing is the process in which the DOM is created
