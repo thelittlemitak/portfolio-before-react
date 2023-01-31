@@ -17,20 +17,20 @@
 //17. min5. template literals with `I'm ${firstName}` also this ticks can be usted for regular strings, so you basically use them always in the end
 //min10. you can change line with \n\ on a string. either this or just using template literals and ENTER
 let miTia =
-  "this \n\
-is a new line";
+  'this \n\
+is a new line';
 //18. if else statements (control structure)
 const age = 19;
 const isOldEnough = age >= 18;
 //is old enough is a/the CONDITION
 if (isOldEnough) {
-  console.log("She is old enough");
+  console.log('She is old enough');
 } else {
   const yearsLeft = 18 - age;
   console.log(`She is not old enough. Wait another ${yearsLeft} years.`);
 }
 //YOU CAN PUT THEM IN ONE LINE IF THE ELSE IS MISSING
-if (age === 18) console.log("you are 18!");
+if (age === 18) console.log('you are 18!');
 let passTest;
 if (passTest) hasDriversLicense = true;
 //20. Type conversion and coercion
@@ -47,46 +47,46 @@ if (passTest) hasDriversLicense = true;
 //const age = Number(prompt("what's your age")); by doing this, age is a number, otherwise it's a string
 //_!== strict oppossito of ===, so it's a doesn't equal; != is the loose version
 //23. Switch Statement
-const day = "monday";
+const day = 'monday';
 switch (day) {
-  case "Monday": // day === 'monday' it's always strict
-    console.log("today is monday");
+  case 'Monday': // day === 'monday' it's always strict
+    console.log('today is monday');
     break;
-  case "tuesday":
-  case "wednesday":
+  case 'tuesday':
+  case 'wednesday':
     console.log("it's not monday but close");
     break;
-  case "thursday":
-    console.log("what a nice day");
+  case 'thursday':
+    console.log('what a nice day');
     break;
   default:
-    console.log("not a valid day!"); // like the else
+    console.log('not a valid day!'); // like the else
 }
 //27. An EXPRESSION is something that has a value. A STATEMENT is code that hasn't a value (it only makes actions, like the if else)
 //28. Conditional/ternary operator (it's an expression; it has a value. And you can create conditioned vars)
 let ageX = 20;
-ageX >= 20 ? console.log("you drink wine") : console.log("you drink water");
+ageX >= 20 ? console.log('you drink wine') : console.log('you drink water');
 //this first part is called the condition. It's the same thing you put in brackets after an if
 //it's an expression; it has a value. And you can create conditioned vars; that's the real use actually
-let myDrink = age >= 20 ? "wine" : "water";
+let myDrink = age >= 20 ? 'wine' : 'water';
 //VS (to see the difference on how to assign a conditioned var) Still notice that you can still do reassignements in both
 let drinkWithIfElse;
 if (age >= 20) {
-  drinkWithIfElse = "wine";
+  drinkWithIfElse = 'wine';
 } else {
-  drinkWithIfElse = "water";
+  drinkWithIfElse = 'water';
 }
 //you can also put it in a template literal, like
-console.log(`I like drinking ${age >= 20 ? "wine" : "water"}`);
+console.log(`I like drinking ${age >= 20 ? 'wine' : 'water'}`);
 //During development: use latest GChrome
 //During production: Use Babel to transpile and polyfill code (converting back to ES5 to ensure browser compatibility for all users)
 //ES5 works with all browsers down to IE 9 from 2011. ES2015 to 2020. It needs the above process
 //http://kangax.github.io/compat-table
 //32. Strict mode: you only need to put this in the fist line
-("use strict");
+('use strict');
 //33. FUNCTIONS
 function logger() {
-  console.log("something logged");
+  console.log('something logged');
 }
 logger();
 logger();
@@ -118,11 +118,11 @@ const calcAge2 = function (birthYear) {
 };
 const ageY2 = calcAge2(1992);
 //35. ARROW function. It doesn't need a return if it has {}
-(birthYear) => 2023 - birthYear;
-const calcAge3 = (birthYear) => 2023 - birthYear;
+birthYear => 2023 - birthYear;
+const calcAge3 = birthYear => 2023 - birthYear;
 const ageY3 = calcAge3(1992);
 //you can also use {} and still without parentesis or with parentesis in case you need more than one argument
-const yearsUntilRetirement = (birthYear) => {
+const yearsUntilRetirement = birthYear => {
   const age = 2037 - birthYear;
   const retirement = 65 - age;
   return retirement;
@@ -140,33 +140,33 @@ function fruitProcessor(apples, oranges) {
   return juice;
 }
 //39. Data structure: ARRAYS
-const friends = ["Michael", "Steven", "Peter"];
-const friendsB = new Array("Michael", "Steven", "Peter");
+const friends = ['Michael', 'Steven', 'Peter'];
+const friendsB = new Array('Michael', 'Steven', 'Peter');
 //only primitive values are unmutable. So you can change an array const like below, but not changing the complete var
-friends[2] = "newFriend";
+friends[2] = 'newFriend';
 //common methods or functions
 friends.length;
-friends.push("newFriend2 at the end");
-friends.unshift("newFriend3 at the beginning");
+friends.push('newFriend2 at the end');
+friends.unshift('newFriend3 at the beginning');
 friends.pop(); //removes the last
 friends.shift(); //removes the first
-friends.indexOf("Michael"); //returns the position of Michael
-friends.includes("Bob"); //returns a boolean and says if that's inside. It checks with strict ===
+friends.indexOf('Michael'); //returns the position of Michael
+friends.includes('Bob'); //returns a boolean and says if that's inside. It checks with strict ===
 //39. Data structure: OBJECTS
-const joseArray = ["Jose", 30, ["Michael", "Steven", "Peter"]];
+const joseArray = ['Jose', 30, ['Michael', 'Steven', 'Peter']];
 //every line/assignement is called property. So here there are 3. Here the order doesn't matter. On the ARRAYS they matter a lot
 const joseObject = {
-  firstName: "Jose",
+  firstName: 'Jose',
   age: 30,
-  friends: ["Michael", "Steven", "Peter"],
+  friends: ['Michael', 'Steven', 'Peter'],
 };
 //to reference one
 joseObject.age;
 joseObject[age]; //here you can put an expression
 //if you want to pass information to do a check, use [], not the .
 //how to add new properties without methods
-joseObject.location = "Berlin";
-joseObject["Instagram"] = "totfosk";
+joseObject.location = 'Berlin';
+joseObject['Instagram'] = 'totfosk';
 //44. Object methods. Functions attached to objects. They are expressions and they always need a property (you cannot just put a function with a name)
 const newObject = {
   birthYear: 1992,
@@ -184,7 +184,7 @@ const newObject = {
 };
 //and in order to call it:
 console.log(newObject.calcAge4(1992));
-console.log(newObject["calcAge4"](1992));
+console.log(newObject['calcAge4'](1992));
 console.log(newObject.calcAge5());
 console.log(newObject.age);
 //'this' is just like putting newObject; but then if you change the object name you would have to do lots of changes (to all references)
@@ -207,9 +207,9 @@ const ages = [];
 const ages2 = [];
 for (let i = 0; i < years.length; i++) {
   //if you use CONTINUE, what's below will not be executed
-  if (typeof joseObject[i] !== "string") continue;
+  if (typeof joseObject[i] !== 'string') continue;
   //if you use BREAK, the loop stops
-  if (typeof joseObject[i] !== "number") break;
+  if (typeof joseObject[i] !== 'number') break;
   ages[i] = 2023 - years[i];
   ages2.push(2023 - years[i]);
 }
@@ -221,19 +221,19 @@ for (let i = joseObject.length - 1; i >= 0; i--);
 //you can also put loops inside loops
 //49. The WHILE loop
 for (let rep = 0; rep <= 10; rep++) {
-  console.log("i am repeating myself");
+  console.log('i am repeating myself');
 }
 //this is a copy of the above but with the new method
 let rep = 0;
 while (rep <= 10) {
-  console.log("i am repeating myself");
+  console.log('i am repeating myself');
   rep++;
 }
 let dice = Math.trunc(Math.random() * 6) + 1;
 while (dice !== 6) {
   console.log(`You rolled a ${dice}`);
   dice = Math.trunc(Math.random() * 6) + 1;
-  if (dice === 6) console.log("you did a 6");
+  if (dice === 6) console.log('you did a 6');
 }
 //the WHILE is used when we don't know how many times is gonna itinerate; the for loops is used when we know that
 //55. min11. You can use user SNIPPETS/SHORTCUTS
@@ -245,50 +245,56 @@ debugger;
 //70. DOM Manipulation
 //most of the times you assign these to a var.
 // & THE DOT IS ONLY FOR THE SELECTOR!
-document.querySelector(".class");
-document.querySelector("#id");
-document.querySelector(".class").textContent; //to see what's inside
-document.querySelector(".class").textContent = "new text"; //to change what's inside
-document.querySelector(".class").value; //to get the inserted value from an input. I don't know how it works for other elements
-document.querySelector(".class").addEventListener("click", function () {
-  console.log("");
+document.querySelector('.class');
+document.querySelector('#id');
+document.querySelector('.class').textContent; //to see what's inside but formated
+document.querySelector('.class').innerHTML; //to see what's inside as shown in the HTML; don't use this one for input! A user could mess around.
+//but it works really well for changing many attributes at once.
+document.querySelector('.class').innerText; //to see what text is inside, no matter who 'has' it
+document.querySelector('.class').textContent = 'new text'; //to change what's inside
+document.querySelector('.class').value; //to get the inserted value from an input. I don't know how it works for other elements
+document.querySelector('.class').addEventListener('click', function () {
+  console.log('');
 }); //'listens to a click
-document.querySelector("body").style.backgroundColor = "#ffffff"; //always the value is a string here
-document.getElementById("only-an-ID"); //here you don't need a . or #, but you need it using the querySelector
+document.querySelector('body').style.backgroundColor = '#ffffff'; //always the value is a string here and the property written in camel case
+//this is called inline styling, so inside HTML
+document.getElementById('only-an-ID'); //here you don't need a . or #, but you need it using the querySelector
+document.getElementsByClassName('only-a-class-name'); //same as above
 //78. Refactoring (cleaning the code)
 //In order to avoid having all these (similar) lines from above, you can create a function. For example: instead of:
-document.querySelector(".class").textContent = "new text"; //everytime you want to do this to the same class, you can rather create this:
+document.querySelector('.class').textContent = 'new text'; //everytime you want to do this to the same class, you can rather create this:
 const displayMessage = function (message) {
-  document.querySelector(".class").textContent = message;
+  document.querySelector('.class').textContent = message;
 };
 //and then use it as
-displayMessage("new-text1");
-displayMessage("new-text2");
-displayMessage("new-text3");
+displayMessage('new-text1');
+displayMessage('new-text2');
+displayMessage('new-text3');
 //Also, using vars for query selectors. So instead of having this:
-document.querySelector(".classAC");
+document.querySelector('.classAC');
 //you can have this
-const classAC = document.querySelector(".class");
+const classAC = document.querySelector('.class');
 //if you want to add/remove classes to classAC:
-classAC.classList.add("hidden");
-classAC.classList.remove("hidden");
-classAC.classList.toggle("hidden");
+classAC.classList.add('hidden');
+classAC.classList.remove('hidden');
+classAC.classList.toggle('hidden');
 //very useful condition for if statements
-classAC.classList.contains("hidden");
-!classAC.classList.contains("hidden");
+classAC.classList.contains('hidden');
+!classAC.classList.contains('hidden');
 //IMPORTANT! If you use QUERY SELECTOR only the first element that has this class will be selected, not the others. In that case you have to use
-document.querySelectorAll(".class-that-is-used-in-more-places");
+document.querySelectorAll('.class-that-is-used-in-more-places');
 //then if you need to do a change in all you need a for loop since what's selected becomes an array of each element w that class (very annoying, but that's what it seems)
+//webdevsim uses Array.from() when doing the selection
 //81. Hear key pressing
-document.addEventListener("keydown", function () {}); //there's also keypress and keyup; self-explanatory
+document.addEventListener('keydown', function () {}); //there's also keypress and keyup; self-explanatory
 //EVENTS are not explained on the course so we jump to youtube: https://www.youtube.com/watch?v=YiOlaiscqDY&ab_channel=dcode
 //Events are actions potencially taken by the user (or by an API), like a click or a key press. HTML has them too as attributes but it's not recommended to use them.
 //When you pass a function like the above, the argument is always the EVENT object. Normally they are repressented with an arrow f
-document.addEventListener("keydown", (e) => {});
+document.addEventListener('keydown', e => {});
 //in order to make things move when a specific key is pressed, you need to beware the key property, so e.key. For example:
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    console.log("do this or that");
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    console.log('do this or that');
   }
 });
 //82. min4. Flow chart (or everything that can happen). Is like a roadmap of all possibilities. http://diagrams.net
@@ -298,4 +304,64 @@ classAC.src = `dice-${dice}.png`;
 //so basically it's only dot . and the attribute you want to change and assign it a string
 //also the above serve as example of a DYNAMIC SELECTOR. That's using a template literal to fill numbers and change what's selected depending on a var. Another e.g.:
 document.getElementById(`current--${activePlayer}`).textContent = currentScore;
-//86. Using functions only to set values from vars, like a reset button
+//86. Using functions only to set values from vars, like a reset button, and put them as a callback. Like: if this happens, all this values go as such
+// * I will learn this as a support: https://www.youtube.com/watch?v=5fb2aPlgoys&ab_channel=freeCodeCamp.org
+//Window object is the top one; the DOM is inside there.
+//min17. how to create elements:
+const ul = document.querySelector('ul');
+const li = document.querySelector('li');
+ul.append('li'); //this creates one inside; otherwise you can just use createElement
+li.getAttribute(); //returns the value of a specified att if this one exist
+li.setAttribute('id', 'newId');
+li.id = "newID"; //it's supposed to do the same as above
+li.removeAttribute('id', 'newId');
+let theParentElement = ul.parentElement;
+let theParentNode = ul.parentNode;
+ul.childNodes; //these select nodes!
+ul.firstChild; //these select nodes!
+ul.lastChild; //these select nodes!
+ul.previousSibling;
+ul.nextSibling;
+//If you want Elements:
+ul.children;
+ul.firstElementChild;
+ul.lastElementChild;
+ul.previousElementSibling;
+ul.nextElementSibling;
+//There is also childElement and childNodes
+//Nodes are every little part of the DOM. Like in Godot. Every node has a parent except the root. Siblings are nodes with the same parent.
+//Also text and attributes are nodes.
+document.documentElement; // selects the HTML
+//min37. Event listeners
+//it can be an attribute (onlick="alert('I love JS')") on HTML (on event method; it can only be applied once) or in JS
+//CLICK:
+const newVarBtn = document.querySelector('.someClass');
+function alertBtn() {
+  alert('I also like JS');
+}
+newVarBtn.addEventListener('click', alertBtn);
+// * there's actually a third parametter, which is a boolean. This one will dictate if the event will work bubbling or capturing (false (bubbling) by default)
+//you can also set up this value to {once: true} to take action only once
+//MOUSEOVER (without a new class):
+const box = document.querySelector('box');
+function changeColor() {
+  box.style.backgroundColor = 'blue';
+}
+newVarBtn.addEventListener('mouseover', changeColor);
+//for some reason they do not use toggle but:
+if (hiddenContent.classList.contains('reveal-btn')) {
+  hiddenContent.classList.remove('reveal-btn');
+} else {
+  hiddenContent.classList.add('reveal-btn');
+}
+//use classes for hidding and revealing elements
+//you can console.log(e) to see all the properties of the event object
+//e.target is like having a query selector var since you are pointing out what you clicked
+//e.stopPropagation(), stops the bubbling/capturing
+//e.preventDefault() to have anchors working as buttons (more on that later)
+//event delegation. There's a trick in which you can take the parent and create a function in which the tarjet is referred. In that case you can add the same
+//function to each child since e.target points out what you clicked (more on that in 01:08:00)
+document.createElement('div'); //rumors say that if you don't append this to the body, it doesn't just appear where you want to
+// * I will learn this as a support too: https://www.youtube.com/watch?v=y17RuWkWdn8&ab_channel=WebDevSimplified
+//to remove an element: first select it; put it on a var. Then:
+varY.remove();
