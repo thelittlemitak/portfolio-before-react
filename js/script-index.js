@@ -59,9 +59,13 @@ const testBox2 = document.querySelector('#testimonial-box-2');
 const testBox3 = document.querySelector('#testimonial-box-3');
 const testBox4 = document.querySelector('#testimonial-box-4');
 
+const testDot1 = document.querySelector('#dot1');
+const testDot2 = document.querySelector('#dot2');
+const testDot3 = document.querySelector('#dot3');
+const testDot4 = document.querySelector('#dot4');
+
 function hideLeftBtn() {
   if (!testImg1.classList.contains('hide-carousel')) {
-    console.log('this is true');
     btnLeft.classList.add('hide-carousel');
   }
 }
@@ -77,8 +81,9 @@ btnRight.addEventListener('click', function () {
     testImg2.classList.remove('hide-carousel');
     testBox1.classList.add('hide-carousel');
     testBox2.classList.remove('hide-carousel');
+    testDot1.classList.remove('selected-dot');
+    testDot2.classList.add('selected-dot');
     btnLeft.classList.toggle('hide-carousel');
-
   } else if (
     testImg3.classList.contains('hide-carousel') &&
     testImg4.classList.contains('hide-carousel')
@@ -87,13 +92,16 @@ btnRight.addEventListener('click', function () {
     testImg3.classList.remove('hide-carousel');
     testBox2.classList.add('hide-carousel');
     testBox3.classList.remove('hide-carousel');
+    testDot2.classList.remove('selected-dot');
+    testDot3.classList.add('selected-dot');
   } else if (testImg4.classList.contains('hide-carousel')) {
     testImg3.classList.add('hide-carousel');
     testImg4.classList.remove('hide-carousel');
     testBox3.classList.add('hide-carousel');
     testBox4.classList.remove('hide-carousel');
+    testDot3.classList.remove('selected-dot');
+    testDot4.classList.add('selected-dot');
     btnRight.classList.toggle('hide-carousel');
-
   }
 });
 
@@ -107,8 +115,9 @@ btnLeft.addEventListener('click', function () {
     testImg3.classList.remove('hide-carousel');
     testBox4.classList.add('hide-carousel');
     testBox3.classList.remove('hide-carousel');
+    testDot4.classList.remove('selected-dot');
+    testDot3.classList.add('selected-dot');
     btnRight.classList.toggle('hide-carousel');
-
   } else if (
     testImg2.classList.contains('hide-carousel') &&
     testImg1.classList.contains('hide-carousel')
@@ -117,11 +126,15 @@ btnLeft.addEventListener('click', function () {
     testImg2.classList.remove('hide-carousel');
     testBox3.classList.add('hide-carousel');
     testBox2.classList.remove('hide-carousel');
+    testDot3.classList.remove('selected-dot');
+    testDot2.classList.add('selected-dot');
   } else if (testImg1.classList.contains('hide-carousel')) {
     testImg2.classList.add('hide-carousel');
     testImg1.classList.remove('hide-carousel');
     testBox2.classList.add('hide-carousel');
     testBox1.classList.remove('hide-carousel');
+    testDot2.classList.remove('selected-dot');
+    testDot1.classList.add('selected-dot');
     btnLeft.classList.toggle('hide-carousel');
   }
 });

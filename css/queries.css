@@ -160,18 +160,20 @@
   }
 
   .testimonial-img {
-    height: 200px;
+    height: 300px;
     
-    margin: 2rem auto;
+    margin: 2rem 50%;
+
+    translate: -50%;
     
-    display: block;
+    /* display: block; */
   }
 
   .testimonial-text {
     font-size: 3rem;
     
     text-align: center;
-    margin: 0rem 3rem 2rem 3rem;
+    margin: 0rem 6rem 2rem 6rem;
   }
 
   .testimonial-name {
@@ -236,6 +238,10 @@
 
   .carousel-container {
     padding-bottom: 1.5rem;
+  }
+
+  .testimonial-img {
+    height: 250px;
   }
 
   footer {
