@@ -48,3 +48,80 @@ readyBtn.addEventListener('click', function () {
 
 const btnLeft = document.querySelector('.carousel-button-left');
 const btnRight = document.querySelector('.carousel-button-right');
+
+const testImg1 = document.querySelector('#testimonial-img-1');
+const testImg2 = document.querySelector('#testimonial-img-2');
+const testImg3 = document.querySelector('#testimonial-img-3');
+const testImg4 = document.querySelector('#testimonial-img-4');
+
+const testBox1 = document.querySelector('#testimonial-box-1');
+const testBox2 = document.querySelector('#testimonial-box-2');
+const testBox3 = document.querySelector('#testimonial-box-3');
+const testBox4 = document.querySelector('#testimonial-box-4');
+
+function hideLeftBtn() {
+  if (!testImg1.classList.contains('hide-carousel')) {
+    console.log('this is true');
+    btnLeft.classList.add('hide-carousel');
+  }
+}
+hideLeftBtn();
+
+btnRight.addEventListener('click', function () {
+  if (
+    testImg2.classList.contains('hide-carousel') &&
+    testImg3.classList.contains('hide-carousel') &&
+    testImg4.classList.contains('hide-carousel')
+  ) {
+    testImg1.classList.add('hide-carousel');
+    testImg2.classList.remove('hide-carousel');
+    testBox1.classList.add('hide-carousel');
+    testBox2.classList.remove('hide-carousel');
+    btnLeft.classList.toggle('hide-carousel');
+
+  } else if (
+    testImg3.classList.contains('hide-carousel') &&
+    testImg4.classList.contains('hide-carousel')
+  ) {
+    testImg2.classList.add('hide-carousel');
+    testImg3.classList.remove('hide-carousel');
+    testBox2.classList.add('hide-carousel');
+    testBox3.classList.remove('hide-carousel');
+  } else if (testImg4.classList.contains('hide-carousel')) {
+    testImg3.classList.add('hide-carousel');
+    testImg4.classList.remove('hide-carousel');
+    testBox3.classList.add('hide-carousel');
+    testBox4.classList.remove('hide-carousel');
+    btnRight.classList.toggle('hide-carousel');
+
+  }
+});
+
+btnLeft.addEventListener('click', function () {
+  if (
+    testImg1.classList.contains('hide-carousel') &&
+    testImg2.classList.contains('hide-carousel') &&
+    testImg3.classList.contains('hide-carousel')
+  ) {
+    testImg4.classList.add('hide-carousel');
+    testImg3.classList.remove('hide-carousel');
+    testBox4.classList.add('hide-carousel');
+    testBox3.classList.remove('hide-carousel');
+    btnRight.classList.toggle('hide-carousel');
+
+  } else if (
+    testImg2.classList.contains('hide-carousel') &&
+    testImg1.classList.contains('hide-carousel')
+  ) {
+    testImg3.classList.add('hide-carousel');
+    testImg2.classList.remove('hide-carousel');
+    testBox3.classList.add('hide-carousel');
+    testBox2.classList.remove('hide-carousel');
+  } else if (testImg1.classList.contains('hide-carousel')) {
+    testImg2.classList.add('hide-carousel');
+    testImg1.classList.remove('hide-carousel');
+    testBox2.classList.add('hide-carousel');
+    testBox1.classList.remove('hide-carousel');
+    btnLeft.classList.toggle('hide-carousel');
+  }
+});
