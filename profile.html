@@ -40,9 +40,7 @@
       </div>
     </header>
 
-    <!-- TABLES -->
-
-        <!-- TEMPORARY GOALS -->
+    <!-- TEMPORARY GOALS -->
 
     <main class="main-profile-container">
       <h3 class="h3-profile"">Temporary goals</h3>
@@ -52,25 +50,27 @@
           <th class="table-top">What has to happen to accomplish it?</th>
           <th class="table-top">Remove?</th>
         </thead>
-        <tbody>
-          <tr>
+        <tbody id="tgtb">
+          <tr id="tgtr">
             <th class="table-goal">Code</th>
             <td>Get a coding job</td>
             <td>
               <div class="checkbox-container">
-                <input type="checkbox" class="table-checkbox" />
+                <input type="checkbox" class="table-checkbox"/>
               </div>
             </td>
           </tr>
+        </tbody>
+        <tbody>
           <tr>
-            <td class="add-goal-plus-button">+</td>
+            <td class="add-goal-plus-button" id="tgAdd">+</td>
             <td class="dummy-goal-row"></td>
             <td class="dummy-goal-row"></td>
           </tr>
         </tbody>
       </table>
 
-        <!-- CONTINUOUS GOALS (TIME DEPENDENT)-->
+      <!-- CONTINUOUS GOALS (TIME DEPENDENT)-->
 
       <h3 class="h3-profile""">Continuous goals (time dependent)</h3>
       <table class="profile-table">
@@ -80,7 +80,7 @@
           <th class="table-top">For how long?</th>
           <th class="table-top">Remove?</th>
         </thead>
-        <tbody>
+        <tbody id="cgttb">
           <tr>
             <th class="table-goal">Exercise</th>
             <td>Daily</td>
@@ -101,8 +101,10 @@
               </div>
             </td>
           </tr>
+        </tbody>
+        <tbody>
           <tr>
-            <td class="add-goal-plus-button">+</td>
+            <td class="add-goal-plus-button" id="cgtAdd">+</td>
             <td class="dummy-goal-row"></td>
             <td class="dummy-goal-row"></td>
             <td class="dummy-goal-row"></td>
@@ -110,7 +112,7 @@
         </tbody>
       </table>
 
-        <!-- CONTINUOUS GOALS (ACTION DEPENDENT)-->
+      <!-- CONTINUOUS GOALS (ACTION DEPENDENT)-->
 
       <h3 class="h3-profile">Continuous goals (action dependent)</h3>
       <table class="profile-table">
@@ -120,7 +122,7 @@
           <th class="table-top">Which action?</th>
           <th class="table-top">Remove?</th>
         </thead>
-        <tbody>
+        <tbody id="cgatb">
           <tr>
             <th class="table-goal">Order</th>
             <td>Weekly</td>
@@ -141,8 +143,10 @@
               </div>
             </td>
           </tr>
+        </tbody>
+        <tbody>
           <tr>
-            <td class="add-goal-plus-button">+</td>
+            <td class="add-goal-plus-button" id="cgaAdd">+</td>
             <td class="dummy-goal-row"></td>
             <td class="dummy-goal-row"></td>
             <td class="dummy-goal-row"></td>
@@ -150,7 +154,7 @@
         </tbody>
       </table>
 
-      <!--DETOX SECTION-->
+      <!--LIMITED ACTIVITIES-->
 
       <h3 class="h3-profile">Limited activities</h3>
       <table class="profile-table">
@@ -160,7 +164,7 @@
           <th class="table-top">Daily time allowed</th>
           <th class="table-top">Remove?</th>
         </thead>
-        <tbody>
+        <tbody id="latb">
           <tr>
             <th class="table-goal">Facebook</th>
             <td>Daily</td>
@@ -181,14 +185,18 @@
               </div>
             </td>
           </tr>
+        </tbody>
+        <tbody>
           <tr>
-            <td class="add-goal-plus-button">+</td>
+            <td class="add-goal-plus-button" id="laAdd">+</td>
             <td class="dummy-goal-row"></td>
             <td class="dummy-goal-row"></td>
             <td class="dummy-goal-row"></td>
           </tr>
         </tbody>
       </table>
+
+      <!--FORBIDDEN ACTIVITIES-->
 
       <h3 class="h3-profile">Forbidden activities</h3>
       <table class="profile-table">
@@ -197,7 +205,7 @@
           <th class="table-top">Until when?</th>
           <th class="table-top">Remove?</th>
         </thead>
-        <tbody>
+        <tbody id="fatb">
           <tr>
             <th class="table-goal">Instagram</th>
             <td>01/03/2029</td>
@@ -207,15 +215,18 @@
               </div>
             </td>
           </tr>
-          
+        </tbody>
+        <tbody>
           <tr>
-            <td class="add-goal-plus-button">+</td>
+            <td class="add-goal-plus-button" id="faAdd">+</td>
             <td class="dummy-goal-row"></td>
             <td class="dummy-goal-row"></td>
           </tr>
         </tbody>
       </table>
 
+      <!--SOCIAL GATHERINGS-->
+      
       <h3 class="h3-profile">Social gatherings</h3>
       <table class="profile-table">
         <thead>
@@ -224,7 +235,7 @@
           <th class="table-top">Notes</th>
           <th class="table-top">Remove?</th>
         </thead>
-        <tbody>
+        <tbody id="sgtb">
           <tr>
             <th class="table-goal">Linda's birthday</th>
             <td>01/03/2023</td>
@@ -235,16 +246,17 @@
               </div>
             </td>
           </tr>
-          
+        </tbody>
+        <tbody>
           <tr>
-            <td class="add-goal-plus-button">+</td>
+            <td class="add-goal-plus-button" id="sgAdd">+</td>
             <td class="dummy-goal-row"></td>
             <td class="dummy-goal-row"></td>
           </tr>
         </tbody>
       </table>
 
-        <!-- PRIORITIES-->
+      <!-- PRIORITIES-->
 
       <h3 class="h3-profile"">Priorities</h3>
       <table class="profile-table">
@@ -385,8 +397,8 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script defer src="js/script.js"></script>
-
+    <script defer src="js/script-shared.js"></script>
+    <script defer src="js/script-profile.js"></script>
   </body>
 
 </html>

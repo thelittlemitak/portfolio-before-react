@@ -55,4 +55,4 @@ let veryNewObject = {
   2: true,
   3: { firstName: 'Jonas' },
 };
-console.log(veryNewObject)
+console.log(veryNewObject);

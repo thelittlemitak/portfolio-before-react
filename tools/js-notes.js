@@ -314,7 +314,7 @@ document.getElementById(`current--${activePlayer}`).textContent = currentScore;
 //min17. how to create elements:
 const ul = document.querySelector('ul');
 const li = document.querySelector('li');
-ul.append('li'); //this creates one inside; otherwise you can just use createElement
+ul.append('li'); //this creates one inside; otherwise you can just use createElement // * this doesn't work since it adds a text node
 li.getAttribute(); //returns the value of a specified att if this one exist
 li.setAttribute('id', 'newId');
 li.id = 'newID'; //it's supposed to do the same as above
