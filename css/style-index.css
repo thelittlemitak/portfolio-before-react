@@ -489,6 +489,8 @@
   height: 1.6rem;
   
   background-color: #22ec98;
+
+  transition: all 0.2s;
 }
 
 .ready-button-container {
@@ -518,4 +520,6 @@
 /* JS UTILITIES */
 .hide-carousel {
   display: none;
+
+  transform: translate(50px);
 } 

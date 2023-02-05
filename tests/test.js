@@ -41,9 +41,18 @@ console.log(ages);
 console.log(ages2)
 */
 
-let dice = Math.trunc(Math.random() * 6) + 1;
-while (dice !== 6) {
-  console.log(`You rolled a ${dice}`);
-  dice = Math.trunc(Math.random() * 6) + 1;
-  if (dice === 6) console.log("you did a 6");
-}
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// while (dice !== 6) {
+//   console.log(`You rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice === 6) console.log("you did a 6");
+// }
+let veryNewArray = [1, 'two', true, { firstName: 'Jonas' }];
+console.log(veryNewArray);
+let veryNewObject = {
+  0: 1,
+  1: 'two',
+  2: true,
+  3: { firstName: 'Jonas' },
+};
+console.log(veryNewObject)

@@ -4,11 +4,12 @@
 //also avoid name, even if it's allowed // real const with upper case (like PI)
 //12. there are only two values: object or primitive // js is dynamic and vars can be reasigned to even another data type
 //min.10:30 the typeof operator
-//reassignements do not need let or var. only the name of the var
+//reassignements do not need let or var. only the name of the var.
 //undefined is a type
 //typeof null is an object because of a bug that won't change because of legacy reasons
 //13. min4. you cannot craete empty const
 //never create a new var without let/const
+//Use const for Objects Arrays and functions and do changes but not reassignements
 //14. console.log(var1, var2, var3)
 //_** means power of, *= as += but with *, x-- as x++ but substracting
 //min.16 vars in js file are available on the console
@@ -63,7 +64,7 @@ switch (day) {
     console.log('not a valid day!'); // like the else
 }
 //27. An EXPRESSION is something that has a value. A STATEMENT is code that hasn't a value (it only makes actions, like the if else)
-//28. Conditional/ternary operator (it's an expression; it has a value. And you can create conditioned vars)
+//* 28. Conditional/ternary operator (it's an expression; it has a value. And you can create conditioned vars)
 let ageX = 20;
 ageX >= 20 ? console.log('you drink wine') : console.log('you drink water');
 //this first part is called the condition. It's the same thing you put in brackets after an if
@@ -283,6 +284,7 @@ classAC.classList.contains('hidden');
 !classAC.classList.contains('hidden');
 //IMPORTANT! If you use QUERY SELECTOR only the first element that has this class will be selected, not the others. In that case you have to use
 document.querySelectorAll('.class-that-is-used-in-more-places');
+document.querySelectorAll('[hereYouCanPutAnAtt]');
 //then if you need to do a change in all you need a for loop since what's selected becomes an array of each element w that class (very annoying, but that's what it seems)
 //webdevsim uses Array.from() when doing the selection
 //81. Hear key pressing
@@ -305,6 +307,8 @@ classAC.src = `dice-${dice}.png`;
 //also the above serve as example of a DYNAMIC SELECTOR. That's using a template literal to fill numbers and change what's selected depending on a var. Another e.g.:
 document.getElementById(`current--${activePlayer}`).textContent = currentScore;
 //86. Using functions only to set values from vars, like a reset button, and put them as a callback. Like: if this happens, all this values go as such
+
+// & YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE
 // * I will learn this as a support: https://www.youtube.com/watch?v=5fb2aPlgoys&ab_channel=freeCodeCamp.org
 //Window object is the top one; the DOM is inside there.
 //min17. how to create elements:
@@ -313,7 +317,7 @@ const li = document.querySelector('li');
 ul.append('li'); //this creates one inside; otherwise you can just use createElement
 li.getAttribute(); //returns the value of a specified att if this one exist
 li.setAttribute('id', 'newId');
-li.id = "newID"; //it's supposed to do the same as above
+li.id = 'newID'; //it's supposed to do the same as above
 li.removeAttribute('id', 'newId');
 let theParentElement = ul.parentElement;
 let theParentNode = ul.parentNode;
@@ -366,3 +370,49 @@ document.createElement('div'); //rumors say that if you don't append this to the
 //to remove an element: first select it; put it on a var. Then:
 varY.remove();
 // * Parsing is the process in which the DOM is created
+// * Data (to create custom atts) in order to get the data to JS we have to first select the element
+<div class="something" data-name="Jose" data-started-coding="old"></div>;
+const something = document.querySelector('.something');
+console.log(something.dataset); // Here you get DOMStringMap, which is an object (not a map), of those atts + keys. So to get the info of one of those is easy:
+something.dataset.dataStartedCoding;
+something.dataset.name;
+// Set and the use of it 1. In order to 'clean' an array by eliminating the duplicates. You create it by
+const myArray = [1, 2, 3, 4, 5];
+const mySet = new Set(myArray);
+const newArray = [...mySet];
+// Getting a little bit to the future via YT to understand some core concepts now
+// Objs vs Maps https://www.youtube.com/watch?v=Z_2rpuPQmC0&ab_channel=LeighHalliday
+//When to use what. Incl. all the others https://codeburst.io/array-vs-set-vs-map-vs-object-real-time-use-cases-in-javascript-es6-47ee3295329b
+// A Key is the name of property names of a Object or Map. In the Object they are always strings. In Maps they an be anything.
+//Set a new value
+const map = new Map([
+  [1, 'one'],
+  [2, 'two'],
+]);
+const obj = {
+  1: 'one',
+  2: 'two',
+};
+// Set new values
+map.set(3, 'three');
+obj[3] = 'three';
+// Get new values
+map.get(3);
+obj[3];
+// Deleting
+map.delete(3);
+delete obj[3];
+// Keys
+map.keys(); //you get a map itinerator
+Object.keys(obj); //you get a string
+// Has
+map.has(2);
+2 in obj;
+obj.hasOwnProperty(2);
+// Values
+map.values();
+Object.values(obj);
+// Entries
+map.entries();
+Object.entries(obj);
+//AND && OR || NOT !
