@@ -14,39 +14,85 @@ const laAdd = document.querySelector('#laAdd');
 const faAdd = document.querySelector('#faAdd');
 const sgAdd = document.querySelector('#sgAdd');
 
-const tgtr = document.querySelector('#tgtr');
-const tableCheckbox = document.querySelectorAll('.table-checkbox');
+let tableCheckbox = document.querySelectorAll('.table-checkbox');
 
-for (i = 0; i < tableCheckbox.length; i++) {
-  tableCheckbox[i].addEventListener('change', function () {
-    console.log(this)
-    this.parentElement.parentElement.parentElement.remove();
-  });
+let i;
+function assignement() {
+  for (i = 0; i < tableCheckbox.length; i++) {
+    tableCheckbox[i].addEventListener('change', function (e) {
+      this.parentElement.parentElement.parentElement.remove();
+    });
+    tableCheckbox = document.querySelectorAll('.table-checkbox');
+  }
 }
 
-// this is working, what's insid the function, if you put a number, but not i.
-
 tgAdd.addEventListener('click', function () {
-  tgtb.innerHTML +=
-    '<tr><th class="table-goal">Code</th><td>Get a coding job</td><td><div class="checkbox-container"><input type="checkbox" class="table-checkbox"/></div></td></tr>';
+  tgtb.insertAdjacentHTML(
+    'beforeend',
+    '<tr><th class="table-goal"><input class="profile-input" type="text" placeholder="New Goal"></th><td><input class="profile-input" type="text" placeholder="What has to happen to accomplish it?"></td><td><div class="checkbox-container"><input type="checkbox" class="table-checkbox" data-test="new"/></div></td></tr>'
+  );
+  assignement();
 });
+
 cgtAdd.addEventListener('click', function () {
-  cgttb.innerHTML +=
-    '<tr><th class="table-goal">Code</th><td>Get a coding job</td><td><div class="checkbox-container"><input type="checkbox" class="table-checkbox"/></div></td></tr>';
+  cgttb.insertAdjacentHTML(
+    'beforeend',
+    '<tr><th class="table-goal"><input class="profile-input" type="text" placeholder="New Goal"></th><td><input class="profile-input" type="text" placeholder="Daily"></td><td><input class="profile-input" type="text" placeholder="15 min"></td><td><div class="checkbox-container"><input type="checkbox" class="table-checkbox" /></div></td></tr>'
+  );
+  assignement();
 });
 cgaAdd.addEventListener('click', function () {
-  cgatb.innerHTML +=
-    '<tr><th class="table-goal">Code</th><td>Get a coding job</td><td><div class="checkbox-container"><input type="checkbox" class="table-checkbox"/></div></td></tr>';
+  cgatb.insertAdjacentHTML(
+    'beforeend',
+    '<tr><th class="table-goal"><input class="profile-input" type="text" placeholder="New Goal"></th><td><input class="profile-input" type="text" placeholder="Daily"></td><td><input class="profile-input" type="text" placeholder="Action to accomplish the goal"></td><td><div class="checkbox-container"><input type="checkbox" class="table-checkbox" /></div></td></tr>'
+  );
+  assignement();
 });
 laAdd.addEventListener('click', function () {
-  latb.innerHTML +=
-    '<tr><th class="table-goal">Code</th><td>Get a coding job</td><td><div class="checkbox-container"><input type="checkbox" class="table-checkbox"/></div></td></tr>';
+  latb.insertAdjacentHTML(
+    'beforeend',
+    '<tr><th class="table-goal"><input class="profile-input" type="text" placeholder="Activity"></th><td><input class="profile-input" type="text" placeholder="Daily"></td><td><input class="profile-input" type="text" placeholder="15 min"></td><td><div class="checkbox-container"><input type="checkbox" class="table-checkbox" /></div></td></tr>'
+  );
+  assignement();
 });
 faAdd.addEventListener('click', function () {
-  fatb.innerHTML +=
-    '<tr><th class="table-goal">Code</th><td>Get a coding job</td><td><div class="checkbox-container"><input type="checkbox" class="table-checkbox"/></div></td></tr>';
+  fatb.insertAdjacentHTML(
+    'beforeend',
+    '<tr><th class="table-goal"><input class="profile-input" type="text" placeholder="Activity"></th><td><input class="profile-input" type="text" placeholder="01/03/2023"></td><td><div class="checkbox-container"><input type="checkbox" class="table-checkbox" /></div></td></tr>'
+  );
+  assignement();
 });
 sgAdd.addEventListener('click', function () {
-  sgtb.innerHTML +=
-    '<tr><th class="table-goal">Code</th><td>Get a coding job</td><td><div class="checkbox-container"><input type="checkbox" class="table-checkbox"/></div></td></tr>';
+  sgtb.insertAdjacentHTML(
+    'beforeend',
+    '<tr><th class="table-goal"><input class="profile-input" type="text" placeholder="Event"></th><td><input class="profile-input" type="text" placeholder="01/03/2023"></td><td><input class="profile-input" type="text" placeholder="Anything I should bring?"></td><td><div class="checkbox-container"><input type="checkbox" class="table-checkbox" /></div></td></tr>'
+  );
+  assignement();
 });
+
+// & PROBLEM 1 add event listener doesn't work after using innerHTML
+
+// * TEST 3 i will try with empty string => so the problem is that when I change the inner HTML,
+// tgAdd.addEventListener('click', function () {
+//   console.log(
+//     "this is a test removing some data from the string to see if that's the problem"
+//   );
+// });
+
+// * TEST 2 i will try to remove all the classes => same as below
+// tgAdd.addEventListener('click', function () {
+//   console.log("this is a test removing some data from the string to see if that's the problem")
+//   tgtb.innerHTML +=
+//     '<tr><th>Code</th><td>Get a coding job</td><td><div><input type="checkbox"/></div></td></tr>';
+// });
+
+// * TEST 1 => the problem is created by changing the HTML
+// tgAdd.addEventListener('click', function () {
+//   console.log("this is a test to see if the innterHTML is the problem")
+// });
+
+// * SOLUTION HERE https://stackoverflow.com/questions/37448622/why-can-event-listeners-stop-working-after-using-element-innerhtml
+
+// & PROBLEM 2 add event listener doesn't work after using remove
+// * the index works correctly and the new stuff is added correctly. Also after removal.
+// * so the problem seems to be similar to the above.
