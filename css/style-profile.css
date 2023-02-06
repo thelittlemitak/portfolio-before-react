@@ -44,7 +44,47 @@
   font-size: 4.4rem;
   background: linear-gradient(#fde9f1, #e9fdf5);
   border-top: 0.2rem solid;
+  position: relative;
 }
+
+.info-box {
+  width: 48rem;
+  font-size: 2.8rem;
+  position: absolute;
+  right: 7%;
+  top: 200%;
+  background-color: #7df4c2;
+  padding: 1rem 2rem 2rem 2rem;
+  z-index: 1;
+  text-align: left;
+  border: 0.3rem solid;
+  box-shadow: 1rem 1rem;
+  opacity: 0%;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.title-icons {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 1rem;
+  transition: all 0.3s;
+}
+
+.title-icons:hover {
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+.title-icons:hover + .info-box {
+  visibility: visible;
+  opacity: 94%;
+  transform: translateY(-50%);
+}
+
+/* .info-box--hidden {
+  display: none;
+} */
 
 .profile-table {
   width: 110rem;
@@ -109,11 +149,10 @@ th {
 }
 .drag-cell:hover {
   cursor: grab;
-  background-color: #f47dae;
+  /* background-color: #f47dae; */
   padding: 0;
   transition: 0.1s;
 }
-
 
 .checkbox-container {
   display: flex;
@@ -134,10 +173,4 @@ th {
   text-align: center;
   width: 100%;
   height: 30px;
-}
-
-.title-icons {
-  width: 2rem;
-  height: 2rem;
-  margin-left: 1rem;
 }

@@ -78,14 +78,14 @@ document.addEventListener('keypress', function (e) {
     document.querySelector('.profile-input-text').value === ''
   ) {
     alert('Please fill the text field next to the goal');
-  } 
+  }
   // * no need for this so you can have empty notes/actions too. What's important is the goal and first field
   // else if (
   //   e.key === 'Enter' &&
   //   document.querySelector('.profile-input-text-2').value === ''
   // ) {
   //   alert('Please fill the text field on the right side too');
-  // } 
+  // }
   else if (
     e.key === 'Enter' &&
     document.querySelector('.profile-input-goal').value === ''
@@ -120,6 +120,12 @@ document.addEventListener('keypress', function (e) {
     inputText2Parent.firstChild.textContent = inputText2Value;
   }
 });
+
+// THE WRAPPER FUNCTIONALITY
+const wrapper = document.querySelector('.wrapper');
+new Sortable(wrapper, {
+  animation: 350
+})
 
 // & PROBLEM 1 add event listener doesn't work after using innerHTML
 

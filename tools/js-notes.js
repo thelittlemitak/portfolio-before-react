@@ -416,3 +416,7 @@ Object.values(obj);
 map.entries();
 Object.entries(obj);
 //AND && OR || NOT ! 
+
+// & OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-
+
+https://ux.stackexchange.com/questions/90336/whats-the-difference-between-a-modal-popup-popover-and-lightbox
