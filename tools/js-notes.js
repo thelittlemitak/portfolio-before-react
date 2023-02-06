@@ -415,4 +415,4 @@ Object.values(obj);
 // Entries
 map.entries();
 Object.entries(obj);
-//AND && OR || NOT !
+//AND && OR || NOT ! 
