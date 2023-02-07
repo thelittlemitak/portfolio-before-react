@@ -18,6 +18,10 @@
   padding: 1rem;
 }
 
+.forum-line:hover {
+  cursor: pointer;
+}
+
 .forum-item {
   font-size: 3rem;
 }
@@ -29,9 +33,20 @@
 .chat-window {
   transform: translateX(2%);
   font-size: 2.5rem;
-  padding: 1rem 5rem 2rem 3rem;
+  padding: 0rem 0rem;
   background-color: #d7fcec;
+  transition: all 0.3s ease-in;
+  height: 0px;
+  opacity: 0%;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
   border: 0.3rem solid;
+  padding: 1rem 5rem 2rem 3rem;
+  height: 100%;
+  opacity: 100%;
 }
 
 .chat-line {
@@ -43,6 +58,16 @@
   align-items: left;
   gap: 1rem;
   border-collapse: collapse;
+}
+
+.forum-input {
+  background-color: white;
+  margin-top: 2rem;
+  transform: translateX(0.5%);
+  padding: 2rem 0rem 2rem 2rem;
+  font-size: 2rem;
+  width: 100%;
+  height: 30px;
 }
 
 /* .chat-line:after {
@@ -64,6 +89,8 @@
   bottom: -5%;
   position: absolute;
 } */
+
+/*
 
 * TINTS OF THE GREEN - https://www.colorhexa.com/c5fae4
 BACKGROUND

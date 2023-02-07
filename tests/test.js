@@ -55,4 +55,8 @@ let veryNewObject = {
   2: true,
   3: { firstName: 'Jonas' },
 };
-console.log(veryNewObject);
+console.log(veryNewObject); 
+
+document.querySelector('#header').addEventListener('click', function(e) {
+  e.target.classList.toggle('transition');
+})

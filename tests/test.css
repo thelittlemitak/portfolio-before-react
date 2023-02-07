@@ -147,3 +147,18 @@ body {
 .x4-a:hover + .x4-b {
   background-color: red;
 }
+
+/****************************** EXPERIMENT 5 */
+
+#header {
+  background: red;
+  padding: 10px 0;
+  position: relative;
+  transition: all 1s linear;
+  left:0;
+}
+
+#header.transition {
+  background: green;
+  left: 50px;
+}
