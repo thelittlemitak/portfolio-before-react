@@ -138,3 +138,71 @@ btnLeft.addEventListener('click', function () {
     btnLeft.classList.toggle('hide-carousel');
   }
 });
+
+testDot1.addEventListener('click', function () {
+  testImg1.classList.remove('hide-carousel');
+  testImg2.classList.add('hide-carousel');
+  testImg3.classList.add('hide-carousel');
+  testImg4.classList.add('hide-carousel');
+  testBox1.classList.remove('hide-carousel');
+  testBox2.classList.add('hide-carousel');
+  testBox3.classList.add('hide-carousel');
+  testBox4.classList.add('hide-carousel');
+  testDot1.classList.add('selected-dot');
+  testDot2.classList.remove('selected-dot');
+  testDot3.classList.remove('selected-dot');
+  testDot4.classList.remove('selected-dot');
+  btnLeft.classList.add('hide-carousel');
+  btnRight.classList.remove('hide-carousel');
+});
+
+testDot2.addEventListener('click', function () {
+  testImg1.classList.add('hide-carousel');
+  testImg2.classList.remove('hide-carousel');
+  testImg3.classList.add('hide-carousel');
+  testImg4.classList.add('hide-carousel');
+  testBox1.classList.add('hide-carousel');
+  testBox2.classList.remove('hide-carousel');
+  testBox3.classList.add('hide-carousel');
+  testBox4.classList.add('hide-carousel');
+  testDot1.classList.remove('selected-dot');
+  testDot2.classList.add('selected-dot');
+  testDot3.classList.remove('selected-dot');
+  testDot4.classList.remove('selected-dot');
+  btnLeft.classList.remove('hide-carousel');
+  btnRight.classList.remove('hide-carousel');
+});
+
+testDot3.addEventListener('click', function () {
+  testImg1.classList.add('hide-carousel');
+  testImg2.classList.add('hide-carousel');
+  testImg3.classList.remove('hide-carousel');
+  testImg4.classList.add('hide-carousel');
+  testBox1.classList.add('hide-carousel');
+  testBox2.classList.add('hide-carousel');
+  testBox3.classList.remove('hide-carousel');
+  testBox4.classList.add('hide-carousel');
+  testDot1.classList.remove('selected-dot');
+  testDot2.classList.remove('selected-dot');
+  testDot3.classList.add('selected-dot');
+  testDot4.classList.remove('selected-dot');
+  btnLeft.classList.remove('hide-carousel');
+  btnRight.classList.remove('hide-carousel');
+});
+
+testDot4.addEventListener('click', function () {
+  testImg1.classList.add('hide-carousel');
+  testImg2.classList.add('hide-carousel');
+  testImg3.classList.add('hide-carousel');
+  testImg4.classList.remove('hide-carousel');
+  testBox1.classList.add('hide-carousel');
+  testBox2.classList.add('hide-carousel');
+  testBox3.classList.add('hide-carousel');
+  testBox4.classList.remove('hide-carousel');
+  testDot1.classList.remove('selected-dot');
+  testDot2.classList.remove('selected-dot');
+  testDot3.classList.remove('selected-dot');
+  testDot4.classList.add('selected-dot');
+  btnLeft.classList.remove('hide-carousel');
+  btnRight.classList.add('hide-carousel');
+});

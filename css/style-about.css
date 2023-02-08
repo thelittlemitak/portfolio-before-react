@@ -1,119 +1,14 @@
 .about-main {
-  margin-top: 6.6rem;
   font-size: 3rem;
-  margin-bottom: 5rem;
+  
   color: #212529;
-}
-
-.about-hero {
-  margin-top: 17rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  
+  margin-top: 6.6rem;
   margin-bottom: 5rem;
 }
 
-.about-hero-left-img {
-  height: 45rem;
-  border: 0.3rem solid #212529;
-  margin-left: 4rem;
-  box-shadow: 1rem 1rem;
-}
-
-.about-hero-right {
-  padding: 3rem 1rem 0rem 3rem;
-  font-size: 5.2rem;
-  background-color: #fac5db;
-  box-shadow: 1rem 1rem;
-  border: 0.3rem solid #212529;
-  max-width: 60rem;
-  height: 70%;
-  margin: auto auto;
-  position: relative;
-
-
-  /* height: 500px; */
-  /* background-color: red; */
-}
-
-.about-hero-right:after {
-  content: "hi!";
-  padding: 0.1rem 1rem;
-  background-color: yellow;
-  position: absolute;
-  left: -3rem;
-  top: -6rem;
-  transform: rotate(-10deg);
-  border: 0.3rem solid #212529;
-}
- 
-.faq-question-container {
-  width: 80rem;
-  height: 9rem;
-  margin-left: 10rem;
-  /* margin-bottom: 10px; */
-  display: grid;
-  grid-template-columns: 10rem 65rem 1fr;
-  /* justify-content: space-between; */
-  /* column-gap: 50px; */
-  /* gap: 30px; */
-  align-items: center;
-  background-color: #fde9f1;
-  border: 0.3rem solid;
-  box-shadow: 0rem 0rem;
-  margin-bottom: 0.1rem;
-}
-
-.faq-number {
-  margin-left: 3.5rem;
-  font-size: 3.8rem;
-  margin-right: 2rem;
-  font-weight: 100;
-}
-
-.faq-question {
-  /* font-weight: 100; */
-  justify-self: left;
-}
-
-.faq-icon {
-  height: 3.6rem;
-  margin-right: 2.6rem;
-  /* justify-self: flex-end; */
-  text-align: end;
-}
-
-.faq-answer {
-  font-size: 2.4rem;
-
-  margin-left: 14rem;
-  background-color: #fac5db;
-  border: 0.3rem solid #212529;
-  box-shadow: 1rem 1rem;
-  margin-right: 9rem;
-  padding: 1.5rem 0rem 1.5rem 5rem;
-  margin-bottom: 1.1rem;
-  transition: 0.5s;
-}
-
-.open-number {
-  font-weight: 700;
-}
-
-.open-question {
-  /* background-color: #fac5db; */
-  translate: 0 1rem;
-  z-index: -1;
-  font-weight: 700;
-  /* display: none; */
-}
-
-.open-answer {
-  background-color: #fac5db;
-  z-index: 2;
-  position: relative;
-  font-weight: 500;
-  /* display: none; */
+.faq-answer a:hover {
+  text-decoration: underline;
 }
 
 .contact-button {
@@ -135,4 +30,125 @@
 
 .contact-button:hover {
   background-color: #22ec98;
+}
+
+.about-hero {
+  margin-top: 17rem;
+  margin-bottom: 5rem;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.about-hero-left-img {
+  height: 45rem;
+  
+  box-shadow: 1rem 1rem;
+  border: 0.3rem solid #212529;
+  
+  margin-left: 4rem;
+}
+
+.about-hero-right {
+  max-width: 60rem;
+  height: 70%;
+  position: relative;
+  
+  font-size: 5.2rem;
+  
+  background-color: #fac5db;
+  border: 0.3rem solid #212529;
+  box-shadow: 1rem 1rem;
+  
+  padding: 3rem 1rem 0rem 3rem;
+  margin: auto auto;
+}
+
+.about-hero-right:after {
+  content: "hi!";
+  top: -6rem;
+  left: -3rem;
+  position: absolute;
+  transform: rotate(-10deg);
+  
+  background-color: yellow;
+  border: 0.3rem solid #212529;
+  
+  padding: 0.1rem 1rem;
+}
+
+.faq-number {
+  font-size: 3.8rem;
+  
+  margin-left: 3.5rem;
+  margin-right: 2rem;
+}
+
+/* to be added to the above */
+
+.open-question {
+  font-weight: 700;
+}
+
+.faq-question-container:hover {
+  cursor: pointer;
+}
+
+.faq-question {
+  justify-self: left;
+}
+
+.faq-icon {
+  height: 3.6rem;
+  
+  justify-self: flex-end;
+  
+  margin-right: 10.6rem;
+}
+
+.faq-answer {
+  height: 0px;
+  
+  font-size: 2.4rem;
+  
+  opacity: 0%;
+  visibility: hidden;
+  
+  background-color: #fac5db;
+  box-shadow: 1rem 1rem;
+  
+  padding: 0rem 0rem;
+  margin-left: 14rem;
+  margin-right: 9rem;
+  
+  transition: all 0.3s ease-in;
+}
+
+.visible {
+  height: 100%;
+  z-index: 20;
+  
+  opacity: 100%;
+  visibility: visible;
+  border: 0.3rem solid #212529;
+  
+  padding: 1rem 5rem 2rem 3rem;
+}
+
+.faq-question-container {
+  max-width: 120rem;
+  height: 9rem;
+  
+  background-color: #fde9f1;
+  border: 0.3rem solid;
+  box-shadow: 0rem 0rem;
+  
+  margin-left: 10rem;
+  
+  display: grid;
+  grid-template-columns: 10rem 65rem 1fr;
+  align-items: center;
+
+  transition: all 0.3s;
 }

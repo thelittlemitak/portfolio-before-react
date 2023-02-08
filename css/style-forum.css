@@ -70,6 +70,10 @@
   height: 30px;
 }
 
+.forum-item-post {
+  text-align: left;
+}
+
 /* .chat-line:after {
   content: '';
   width: 95%;

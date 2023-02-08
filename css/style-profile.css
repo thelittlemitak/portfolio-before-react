@@ -29,6 +29,7 @@
 
 .guide-button:hover {
   background-color: #22ec98;
+  cursor: pointer;
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&& SECTION */
