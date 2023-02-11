@@ -420,3 +420,7 @@ Object.entries(obj);
 // & OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-
 
 // https://ux.stackexchange.com/questions/90336/whats-the-difference-between-a-modal-popup-popover-and-lightbox
+// https://www.spiceworks.com/tech/cloud/articles/stateful-vs-stateless/#:~:text=A%20stateless%20system%20sends%20a,if%20no%20response%20is%20received.
+// https://www.w3schools.com/jquery/jquery_get_started.asp
+// https://haseebq.com/how-to-break-into-tech-job-hunting-and-interviews/
+// Informational Interviewing (tbc)
