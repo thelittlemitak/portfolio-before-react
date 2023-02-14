@@ -308,6 +308,158 @@ classAC.src = `dice-${dice}.png`;
 document.getElementById(`current--${activePlayer}`).textContent = currentScore;
 //86. Using functions only to set values from vars, like a reset button, and put them as a callback. Like: if this happens, all this values go as such
 
+//206. OOP A class is like a model or template (it's not an object)
+//An instance is an object and a filled (with data) 'copy' of this original class
+//Principles: Abstraction (hiding what's not needed). Encapsulation (deciding what's private and what's public (API))
+//Inheritance (so the code is not repeated; using parent/child classes). Polymorphism (child overwritting a parent property/functionality)
+//207. In JS, there are prototypes (objects contained in all objects), which contain methods, that are actually delegated upwards (so the prototype does the behaviour
+//and they are always linked). In traditional OOP, an instance copies this functionality from the class but it doesn't go upwards
+//208. Constructor functions (class/type creators) start with capital letter
+const Person = function (firstName, birthYear) {
+  //instance properties
+  this.firstName = firstName;
+  this.secondArgument = birthYear;
+  // * to create a method, never do this! Otherwise every instance will run this
+  //Instead we have to do what's explained above. So delegate this f to the parent class or prototype
+  // * this.calcAge = function () {
+  // *  console.log(2037 - this.birthYear);
+  // * };
+};
+const instance1 = new Person('This is my name', 1992);
+const instance2 = new Person('This is my other name', 1995);
+const jose = new Person('Jose', 1992);
+const matilda = new Person('Matilda', 1995);
+console.log(instance1, instance2, jose, matilda);
+//to check if something is an instance of
+console.log(jose instanceof Person);
+//209. Prototypes (this are properties that will be inherited by all objects created with the Person constructor)
+Person.prototype.calcAge = function () {
+  console.log(2037 - this.birthYear);
+};
+jose.calcAge();
+//__proto__ is the prototype of the object, but prototype (of Person) is not the prototype of anything;
+//but the prototype that the objects created with the constructor will have
+console.log(jose.__proto__) === Person.prototype; //this is true
+// 210. Protoype chain
+console.log(Person.prototype);
+console.log(Person.__proto__);
+console.log(jose.__proto__); // this is the same as above
+console.log('-----------------------------------------');
+console.log(jose.__proto__.__proto__);
+console.log(Object.prototype);
+console.log(objectVar.__proto__);
+// 211. Prototype inheritance in biult-in Objects. All functions have a prototype
+const arr = [1, 2, 3, 4, 1, 2, 3]; // this is the same as new Array
+console.log(arr.__proto__ === Array.prototype);
+console.log(arr.__proto__.__proto__ === Object.prototype);
+// When you do arr.filter() for example, you are actually doing arr.prototype.filter() but it shows as the first
+// This is because the method lives in the prototype object of Array
+// Same as you do with Person.prototype, you can add methods to all objects or arrays just by doing Array.prototype, but it's not recommended!
+// All DOM elements are objects too
+// 213. There are actually classes. Expressions and Declaration. This is is the same as above but nicer
+// const PersonCl = class {}
+class PersonC1 {
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
+  // Methods will be added to the prototype property
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  }
+}
+const jessica = new PersonC1('Jessica', 1996);
+console.log(jessica.__proto__ === PersonC1.prototype);
+// Check this out: classes are never hoisted and never executed in strict mode. They are first class citizens too
+// If any programming language has the ability to treat functions as values, to pass them as arguments and to return a function from another function
+// then it is said that  programming language has First Class Functions and the functions are called as First Class Citizens in that programming language
+// PERSONAL PREFERENCE You can use both classes or the old process. Jonas approved class better (cleaner)
+// Object literal is when you create an object from a var as you did at first
+// 214. Setters and Getters (a way to avoid creating methods that have to be called just to get data/property from simple logic)
+class PersonC12 {
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
+  get age() {
+    return 2037 - this.birthYear;
+  }
+  // set a property that already exists
+  set fullName(name) {
+    if (name.includes(' ')) this._fullName = name;
+    else alert(`${name}" is not a full name!`); // alerts block the code from keep running
+  }
+  get fullName() {
+    return this._fullName;
+  }
+  //Static method (this won't be added to the prototype property)
+  static hey() {
+    console.log('hey there');
+  }
+}
+const account = {
+  owner: 'Jonas',
+  movements: [213, 12313, 123, 12313, 123],
+  get latest() {
+    return this.movements.slice(-1).pop();
+  },
+  set newMove(mov) {
+    this.movements.push(mov);
+  },
+};
+// by setting a getter you can get the value as a property without calling the function, so:
+account.latest; // will equal to 300 without having to do:
+account.latest();
+// by setting a setter, you can add arguments as assignements, so
+account.newMove = 50; // without having to do:
+account.newMove(50);
+// 215. Static Methods (like Array.from()) they are functions/functions that are only available on the constructor. In order to add it to a class (check above)
+// 216. Object.create
+const PersonProto = {
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  },
+};
+const steven = Object.create(PersonProto);
+// 246. Asynchronous JS, AJAX and APIs
+// Asynchronous means controlling the timing of operations by the use of pulses sent when the previous operation is completed rather than at regular intervals
+// or not existing or occurring at the same time.
+// Fetch means go for and then bring back (someone or something) for someone
+// AJAX stands for Asynchronous JavaScript And XML but XML is not used anymore but json (most popular data format). The name AJAX still stands
+// 248. How to do an AJAX call (you can check http://github.com/public-apis) CORS should always be in Yes or Unknown
+// CORS Cross Origin Resource Sharing; so if it doesn't have this, you won't have access
+// When in the resourse page, look for the API ENDPOINT, which is basically the URL needed
+const request = new XMLHttpRequest(); // old school
+request.open('GET', 'urlFromThePublicApi');
+request.send();
+request.addEventListener('load', function () {
+  console.log(this.responseText); // not useful cause JSON is just a string of text. To pass it as an object you need to
+  const [newData] = JSON.parse(this.responseText);
+  // now you have an object called newData that you can have access to like any other
+  const html = // `here you can put all the HTML needed like <p>`This is ${newData.population} or that`</p>`;
+  whateverDivPreviouslySelected.insertAdjacentHTML('beforeend', html);
+})
+// 249. How the web works
+// When you search a domain, it's the DNS (through the internet provider) who searches for the exact IP address
+// 270. Overview about modern JS (About npm, bundling and transpiling/polyfilling)
+// 271. Modules and ex im overview (they run in strict by default)
+// 272. Creating modules, ex and im (they are live connections (they point to the same place in memory); not a copy)
+// * script.js (im)
+import './shoppingCart'; //.js at the end is not 100% necessary
+// ? this above
+import { variableNameFromTheOtherFile, oneThingFromTheOtherFile as aNewName } from './shoppingCart';
+//you also need to add the att type="module" in HTML to this script from above
+import * as ShoppingCart from './shoppingCart'; //this create an object with everything from the other file; so what's exporting is a public API
+// & default im and ex. For this file, we use this
+import varName from './shoppingCart'; // this will automatically assign this var to what has been sent below
+// * shoppingCart.js (ex)
+// if you add something here (vars, fs) it will be like in a top level scoped, so not accessible from im file. Unless you export it as
+export // and whatever you want to ex. Above you also need to do // ? this, otherwise it will not pick it up
+// Also what you export (in this file) has to be in top level scope, so not between curly brackets or in a if statement
+// If it's more than one thing, you need to put it between curly brackets as with the im. You can also change the name with as
+// & default im and ex. For this file, we use this
+export default // and a value or whatever
+
 // & YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE
 // * I will learn this as a support: https://www.youtube.com/watch?v=5fb2aPlgoys&ab_channel=freeCodeCamp.org
 //Window object is the top one; the DOM is inside there.
@@ -415,7 +567,10 @@ Object.values(obj);
 // Entries
 map.entries();
 Object.entries(obj);
-//AND && OR || NOT ! 
+//AND && OR || NOT !
+// * About prototypes and OOP
+// https://www.youtube.com/watch?v=GhJTy5-X3kA
+let newO = new Object(); // here you reference the ultimate constructor, the one whos proto is null
 
 // & OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-
 
