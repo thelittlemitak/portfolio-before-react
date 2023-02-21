@@ -245,7 +245,7 @@ while (dice !== 6) {
 debugger;
 //70. DOM Manipulation
 //most of the times you assign these to a var.
-// & THE DOT IS ONLY FOR THE SELECTOR!
+// ! THE DOT IS ONLY FOR THE SELECTOR!
 document.querySelector('.class');
 document.querySelector('#id');
 document.querySelector('.class').textContent; //to see what's inside but formated
@@ -338,8 +338,8 @@ Person.prototype.calcAge = function () {
 };
 jose.calcAge();
 //__proto__ is the prototype of the object, but prototype (of Person) is not the prototype of anything;
-//but the prototype that the objects created with the constructor will have
-console.log(jose.__proto__) === Person.prototype; //this is true
+//but the prototype (__proto__) that the objects created with the constructor will have
+console.log(jose.__proto__) === Person.prototype; //this is true; this in a sentence means: __proto__ from an instance is the prototype of the constructor f
 // 210. Protoype chain
 console.log(Person.prototype);
 console.log(Person.__proto__);
@@ -375,7 +375,7 @@ console.log(jessica.__proto__ === PersonC1.prototype);
 // then it is said that  programming language has First Class Functions and the functions are called as First Class Citizens in that programming language
 // PERSONAL PREFERENCE You can use both classes or the old process. Jonas approved class better (cleaner)
 // Object literal is when you create an object from a var as you did at first
-// 214. Setters and Getters (a way to avoid creating methods that have to be called just to get data/property from simple logic)
+// 214. Setters and Getters (a way to avoid creating methods that have to be called just to get data/property from inside withsimple logic)
 class PersonC12 {
   constructor(fullName, birthYear) {
     this.fullName = fullName;
@@ -421,6 +421,46 @@ const PersonProto = {
   },
 };
 const steven = Object.create(PersonProto);
+// This from above is the same as using Object.prototype or adding the method to the class after the constructor. This is just another way
+// Theres is a diagram to explain the difference of using this to using Object.prototype at min5
+// 218. Inheritance between classes
+const Grandfather = function (vname, nname) {
+  (this.vname = vname), (this.nname = nname);
+  console.log();
+};
+const grandfather1 = new Grandfather('jose', 'riera');
+console.log(grandfather1);
+const Father = function (vname, nname, job) {
+  Grandfather.call(this, vname, nname); // ! here, this is father1, so this becomes the instance and afterwards, the property
+  this.job = job;
+};
+const father1 = new Father('juan', 'calvo', 'poli');
+console.log(father1);
+// If you see lesson 216, you will see that you can create an object adding it properties/mothods
+const PersonProto2 = {
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  },
+};
+// ! about not understanding this inside a constructor in the Udemy video and the answer from the teacher
+// ! this inside the Student constructor will point to each instance created by the Student constructor, which is (only) mike in our case
+// ! https://www.youtube.com/watch?v=Om9TZ1wc2bw ! this video is amazing to really understand what new does
+// * good resourse pending below
+// https://medium.com/front-end-weekly/why-is-it-so-hard-to-grasp-prototypal-inheritance-in-javascript-981598c7b283
+// 220. Inheritance between clases with extends and super
+class StudentCl extends PersonCl {
+  constructor(vname, birthYear, course) {
+    //Always need to hapen course
+    super(vname, birthYear); //here you put the arguments of PersonCl
+    this.course = course;
+  }
+}
+// If you don't need to add more arguments, you don't need a constructor at all; only // ! class StudentCl extends PersonCl
+// 221. More about Object.create // ! Jonas says this is the best option for him
+
+const steven2 = Object.create(PersonProto2);
+// So if you add the prototype of another object, you are extending it
+Student.prototype = Object.create(Person.prorotype); // by doing this, you are taking the methods from Person.prototype object
 // 246. Asynchronous JS, AJAX and APIs
 // Asynchronous means controlling the timing of operations by the use of pulses sent when the previous operation is completed rather than at regular intervals
 // or not existing or occurring at the same time.
@@ -437,8 +477,8 @@ request.addEventListener('load', function () {
   const [newData] = JSON.parse(this.responseText);
   // now you have an object called newData that you can have access to like any other
   const html = // `here you can put all the HTML needed like <p>`This is ${newData.population} or that`</p>`;
-  whateverDivPreviouslySelected.insertAdjacentHTML('beforeend', html);
-})
+    whateverDivPreviouslySelected.insertAdjacentHTML('beforeend', html);
+});
 // 249. How the web works
 // When you search a domain, it's the DNS (through the internet provider) who searches for the exact IP address
 // 270. Overview about modern JS (About npm, bundling and transpiling/polyfilling)
@@ -447,7 +487,10 @@ request.addEventListener('load', function () {
 // * script.js (im)
 import './shoppingCart'; //.js at the end is not 100% necessary
 // ? this above
-import { variableNameFromTheOtherFile, oneThingFromTheOtherFile as aNewName } from './shoppingCart';
+import {
+  variableNameFromTheOtherFile,
+  oneThingFromTheOtherFile as aNewName,
+} from './shoppingCart';
 //you also need to add the att type="module" in HTML to this script from above
 import * as ShoppingCart from './shoppingCart'; //this create an object with everything from the other file; so what's exporting is a public API
 // & default im and ex. For this file, we use this
@@ -458,7 +501,7 @@ export // and whatever you want to ex. Above you also need to do // ? this, othe
 // Also what you export (in this file) has to be in top level scope, so not between curly brackets or in a if statement
 // If it's more than one thing, you need to put it between curly brackets as with the im. You can also change the name with as
 // & default im and ex. For this file, we use this
-export default // and a value or whatever
+// export default and a value or whatever
 
 // & YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE-YOUTUBE
 // * I will learn this as a support: https://www.youtube.com/watch?v=5fb2aPlgoys&ab_channel=freeCodeCamp.org
@@ -571,11 +614,39 @@ Object.entries(obj);
 // * About prototypes and OOP
 // https://www.youtube.com/watch?v=GhJTy5-X3kA
 let newO = new Object(); // here you reference the ultimate constructor, the one whos proto is null
+// https://www.youtube.com/watch?v=CCb96W92A54 // call explained. It just adds a first argument to specify what this in a f is (otherwise it's undefined)
+function printName(first, last) {
+  console.log(`${first} ${last}`);
+  console.log(this);
+}
+printName.call('something', 'jose', 'riera');
 
 // & OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-OTHER-RESOURCES-
-
 // https://ux.stackexchange.com/questions/90336/whats-the-difference-between-a-modal-popup-popover-and-lightbox
 // https://www.spiceworks.com/tech/cloud/articles/stateful-vs-stateless/#:~:text=A%20stateless%20system%20sends%20a,if%20no%20response%20is%20received.
 // https://www.w3schools.com/jquery/jquery_get_started.asp
 // https://haseebq.com/how-to-break-into-tech-job-hunting-and-interviews/
 // Informational Interviewing (tbc)
+// Compile time is the period when the programming code (such as C#, Java, C, Python) is converted to the machine code (i.e. binary code)
+// Runtime is the period of time when a program is running and generally occurs after compile time
+
+//! JS reserved words
+/*
+abstract	arguments	await	boolean
+break	byte	case	catch
+char	class	const	continue
+debugger	default	delete	do
+double	else	enum	eval
+export	extends	false	final
+finally	float	for	function
+goto	if	implements	import
+in	instanceof	int	interface
+let	long	native	new
+null	package	private	protected
+public	return	short	static
+super	switch	synchronized	this
+throw	throws	transient	true
+try	typeof	var	void
+volatile	while	with	yield
+*/
+//https://www.w3schools.com/js/js_reserved.asp

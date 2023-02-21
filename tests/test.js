@@ -131,3 +131,46 @@ console.log(ages2)
 // console.dir(Car); // this is a function
 // console.dir(Object); // this is a function
 
+// function printName (first, last) {
+//   console.log(`${first} ${last}`);
+//   console.log(this);
+// }
+// printName.call("something", "jose", "riera");
+
+const ManualProto = { // important: it has to be an object
+  calcAge(a, b) {
+    return a + b;
+  },
+};
+const steven = Object.create(ManualProto); // now you have an object that has calcAge in it's Protoype, but nothing else
+console.log(steven); // actually the prototype of steven IS ManualProto; and ManualProto already includes the prototype of object
+console.log(steven.__proto__ === ManualProto); // this is key to understand what's what. The result is true
+// The way he explains how to do add properties, is by having a 'constructor' inside the proto, so
+const ManualProto2 = { // important: it has to be an object
+  calcAge(a, b) {
+    return a + b;
+  },
+  init(vname, nname) {
+    this.vname = vname;
+    this.nname = nname;
+  }
+};
+const steven2 = Object.create(ManualProto2);
+ManualProto2.init('jose', 'riera');
+console.log(steven2);
+
+// const Grandfather = function (vname, nname) {
+//   (this.vname = vname), (this.nname = nname);
+//   console.log();
+// };
+// Grandfather.prototype = Object.create(ManualProto);
+
+// const grandfather1 = new Grandfather('jose', 'riera');
+// console.log(grandfather1);
+
+// const Father = function (vname, nname, job) {
+//   Grandfather.call(this, vname, nname);
+//   this.job = job;
+// };
+// const father1 = new Father('juan', 'calvo', 'poli');
+// console.log(father1);
